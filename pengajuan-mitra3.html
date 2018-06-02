@@ -173,13 +173,20 @@
                           <input class="input" type="email" readonly value="Rp 25.000.000 ~ Rp 30.000.000">
                         </div>
                       </div>
+                      <div class="field has-text-left mt1">
+                        <label class="label">Kelamin</label>
+                        <input class="is-checkradio is-info" id="pejantan" type="radio" name="radio" checked="checked">
+                        <label for="pejantan" class="ml0">Pejantan</label>
+                        <input class="is-checkradio is-info" id="betina" type="radio" name="radio">
+                        <label for="betina">Betina</label>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="field mt2">
-              <a href="daftar.html" class="button btn-akadQ w-250">Lanjutkan</a>
+              <a href="pengajuan-mitra4.html" class="button btn-akadQ w-250">Lanjutkan</a>
             </div>
           </div>
         </div>
@@ -187,27 +194,6 @@
     </div>
   </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src='http://maps.google.com/maps/api/js?sensor=false&libraries=places'></script>
-  <script src="js/locationpicker.jquery.js"></script>
-  <script>
-    $('#somecomponent').locationpicker();
-
-    function pribadi() {
-      $('.pribadi').css('display', 'block')
-      $('.badanusaha').css('display', 'none')
-    }
-    function badanusaha() {
-      $('.badanusaha').css('display', 'block')
-      $('.pribadi').css('display', 'none')
-    }
-
-    $('.btn-map').click(function(){
-      $('.point-map').addClass('is-active')
-    })
-    $('.delete').click(function(){
-      $('.point-map').removeClass('is-active')
-    })
-  </script>
   
 </body>
 </html>

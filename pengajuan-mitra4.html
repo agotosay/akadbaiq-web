@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>AkadBaiQ</title>
+  <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/extension.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+</head>
+<body>
+  
+  <section class="hero">
+    <div class="columns">
+      <div class="column is-narrow pb0">
+        <div class="left-menu is-back-grey">
+          <div class="brand-icon has-text-centered">
+            <img src="img/logo.png" alt="Logo" width="70%">
+          </div>
+          <aside class="menu">
+            <ul class="menu-list">
+              <li class="is-active"><a>Tambah Hewan</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="right-menu">
+          <nav class="level top-menu">
+            <div class="level-left">
+            </div>
+            <div class="level-right">
+            </div>
+          </nav>
+          <div class="content has-text-centered">
+            <div class="title">
+              Terima Kasih Telah Mendaftar
+            </div>
+            <!-- content -->
+            <div class="columns is-centered mt1">
+              <div class="column is-8">
+                <div class="content">
+                  <p class="subtitle is-size-6 fw300">Langkah Selanjutnya Team Lapangan Kami akan menverifikasi peternakan Anda untuk menjadi Mitra AkadbaiQ, Silahkan tunggu sampai Team Lapangan menyetujui perternakan Anda. </p>
+                </div>
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 198.688 223.545" width="200">
+                    <defs>
+                      <style>
+                        .time {
+                          fill: #00aeef;
+                        }
+                      </style>
+                    </defs>
+                    <g id="seconds" transform="translate(-26.289)">
+                      <g id="Layer_8_46_" transform="translate(26.289)">
+                        <path id="Path_31804" data-name="Path 31804" class="time" d="M202.058,60.827l6.571-6.57a4.937,4.937,0,0,0,5.575-.98l1.17-1.168a4.966,4.966,0,0,0,0-7.012l-8.419-8.418a4.957,4.957,0,0,0-7.014,0l-1.166,1.168a4.959,4.959,0,0,0,0,7.012l.26.256L192.952,51.2a98.865,98.865,0,0,0-58.305-25.9V19.232h.88a8.239,8.239,0,0,0,8.242-8.241V8.242A8.242,8.242,0,0,0,135.527,0H115.74A8.24,8.24,0,0,0,107.5,8.241v2.75a8.24,8.24,0,0,0,8.242,8.241h.877v6.036a99.343,99.343,0,0,0,3.542,198.126c1.862.1,3.708.152,5.551.152A99.279,99.279,0,0,0,202.058,60.827Zm9.543,68.112A86.1,86.1,0,1,1,125.557,38.1c1.6,0,3.2.045,4.823.133A86.2,86.2,0,0,1,211.6,128.939Zm-70.19-4.745a15.776,15.776,0,1,1-20.283-15.114V61.6a4.507,4.507,0,1,1,9.014,0v47.491A15.772,15.772,0,0,1,141.412,124.194Z" transform="translate(-26.289)"/>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="field mt2">
+              <a href="home-login.html" class="button btn-akadQ w-250">Kembali Ke Dashboard</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src='http://maps.google.com/maps/api/js?sensor=false&libraries=places'></script>
+  <script src="js/locationpicker.jquery.js"></script>
+  <script>
+    $('#somecomponent').locationpicker();
+
+    function pribadi() {
+      $('.pribadi').css('display', 'block')
+      $('.badanusaha').css('display', 'none')
+    }
+    function badanusaha() {
+      $('.badanusaha').css('display', 'block')
+      $('.pribadi').css('display', 'none')
+    }
+
+    $('.btn-map').click(function(){
+      $('.point-map').addClass('is-active')
+    })
+    $('.delete').click(function(){
+      $('.point-map').removeClass('is-active')
+    })
+  </script>
+  
+</body>
+</html>
