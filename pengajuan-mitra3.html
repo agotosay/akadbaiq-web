@@ -39,118 +39,138 @@
               Tambah Hewan
             </div>
             <p class="subtitle is-size-6 fw300">Masukan data-data hewan yang Anda jual dibawah ini secara lengkap</p>
-            <div class="field mt3">
-              <label class="label">Pilih Untuk</label>
-              <input class="is-checkradio is-info" id="pribadi" type="radio" name="radio" checked="checked" onclick="pribadi()">
-              <label for="pribadi">Pribadi</label>
-              <input class="is-checkradio is-info" id="badanusaha" type="radio" name="radio" onclick="badanusaha()">
-              <label for="badanusaha">Badan Usaha</label>
-            </div>
-            <!-- pribadi -->
-            <div class="pribadi">
+            <!-- content -->
+            <div class="tambah-ternak">
               <div class="columns is-centered mt1">
                 <div class="column is-8">
                   <div class="columns">
                     <div class="column">
                       <div class="field mt1">
-                        <label class="label has-text-left">Nama Penanggung Jawab</label>
+                        <label class="label has-text-left">Jenis Komoditas</label>
                         <div class="control">
-                          <input class="input" type="text" placeholder="Nama Penanggung Jawab">
+                          <div class="select is-fullwidth">
+                            <select>
+                              <optgroup label="Sapi">
+                                <option value="Sapi Jawa">Sapi Jawa</option>
+                                <option value="Sapi Limosin">Sapi Limosin</option>
+                              </optgroup>
+                              <optgroup label="Kambing">
+                                <option value="Kambing Etawa">Kambing Etawa</option>
+                                <option value="Kambing Kacang">Kambing Kacang</option>
+                              </optgroup>
+                              <optgroup label="Domba">
+                                <option value="Kambing Etawa">Domba Garut</option>
+                                <option value="Kambing Kacang">Domba Batur</option>
+                              </optgroup>
+                            </select>
+                          </div>
                         </div>
                       </div>
                       <div class="field mt1">
-                        <label class="label has-text-left">NIK KTP</label>
+                        <label class="label has-text-left">Berat</label>
                         <div class="control">
-                          <input class="input" type="number" placeholder="NIK KTP">
+                          <input class="input" type="number" placeholder="contoh: 103kg">
                         </div>
                       </div>
                       <div class="field mt1">
-                        <label class="label has-text-left">Email</label>
+                        <label class="label has-text-left">Tinggi</label>
                         <div class="control">
-                          <input class="input" type="email" placeholder="Email Anda">
+                          <input class="input" type="email" placeholder="contoh: 120cm">
                         </div>
                       </div>
                       <div class="field mt1">
-                        <label class="label has-text-left">No Handphone / Telpon</label>
+                        <label class="label has-text-left">Grade</label>
                         <div class="control">
-                          <input class="input" type="number" placeholder="No Handphone / Telpon">
+                          <input class="input" type="email" readonly value="Grade A">
                         </div>
                       </div>
                       <div class="field mt1">
-                        <label class="label has-text-left">NPWP</label>
-                        <div class="control">
-                          <input class="input" type="number" placeholder="NPWP">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Nomor Rekening</label>
-                        <div class="control">
-                          <input class="input" type="number" placeholder="Nomor Rekening">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Rekening Atas Nama</label>
-                        <div class="control">
-                          <input class="input" type="number" placeholder="Rekening Atas Nama">
+                        <label class="label has-text-left">Upload Foto Hewan</label>
+                        <div class="columns">
+                          <div class="column">
+                            <div class="pic-hewan">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 67.5" width="30">
+                                <defs>
+                                  <style>
+                                    .pic-ternak {
+                                      fill: #a7a7a7;
+                                    }
+                                  </style>
+                                </defs>
+                                <g id="camera" transform="translate(0 -25.5)">
+                                  <g id="camera-alt" transform="translate(0 25.5)">
+                                    <circle id="Ellipse_71" data-name="Ellipse 71" class="pic-ternak" cx="12" cy="12" r="12" transform="translate(25.5 25.5)"/>
+                                    <path id="Path_31604" data-name="Path 31604" class="pic-ternak" d="M26.25,25.5,19.5,33H7.5A7.522,7.522,0,0,0,0,40.5v45A7.522,7.522,0,0,0,7.5,93h60A7.522,7.522,0,0,0,75,85.5v-45A7.522,7.522,0,0,0,67.5,33h-12l-6.75-7.5ZM37.5,81.75A18.75,18.75,0,1,1,56.25,63,18.568,18.568,0,0,1,37.5,81.75Z" transform="translate(0 -25.5)"/>
+                                  </g>
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="column">
+                            <div class="pic-hewan">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 67.5" width="30">
+                                <defs>
+                                  <style>
+                                    .pic-ternak {
+                                      fill: #a7a7a7;
+                                    }
+                                  </style>
+                                </defs>
+                                <g id="camera" transform="translate(0 -25.5)">
+                                  <g id="camera-alt" transform="translate(0 25.5)">
+                                    <circle id="Ellipse_71" data-name="Ellipse 71" class="pic-ternak" cx="12" cy="12" r="12" transform="translate(25.5 25.5)"/>
+                                    <path id="Path_31604" data-name="Path 31604" class="pic-ternak" d="M26.25,25.5,19.5,33H7.5A7.522,7.522,0,0,0,0,40.5v45A7.522,7.522,0,0,0,7.5,93h60A7.522,7.522,0,0,0,75,85.5v-45A7.522,7.522,0,0,0,67.5,33h-12l-6.75-7.5ZM37.5,81.75A18.75,18.75,0,1,1,56.25,63,18.568,18.568,0,0,1,37.5,81.75Z" transform="translate(0 -25.5)"/>
+                                  </g>
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="column">
+                            <div class="pic-hewan">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 88" width="30">
+                                <defs>
+                                  <style>
+                                    .plus {
+                                      fill: #a7a7a7;
+                                      font-size: 67px;
+                                      font-family: Roboto-Regular, Roboto;
+                                    }
+                                  </style>
+                                </defs>
+                                <text id="_" data-name="+" class="plus" transform="translate(0 70)"><tspan x="0" y="0">+</tspan></text>
+                              </svg>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                     <div class="column">
                       <div class="field mt1">
-                        <label class="label has-text-left">Nama Peternakan</label>
+                        <label class="label has-text-left">Pilih Peternakan</label>
                         <div class="control">
-                          <input class="input" type="text" placeholder="Nama Peternakan">
-                        </div>
-                      </div>
-                      <div class="field has-text-left mt1">
-                        <label class="label">Komoditas Hewan</label>
-                        <input class="is-checkradio is-info" id="sapi" type="checkbox" name="sapi" checked="checked">
-                        <label for="sapi" class="no-margin">Sapi</label>
-                        <input class="is-checkradio is-info" id="kambing" type="checkbox" name="kambing">
-                        <label for="kambing" class="no-margin">Kambing</label>
-                        <input class="is-checkradio is-info" id="domba" type="checkbox" name="domba">
-                        <label for="domba" class="no-margin">Domba</label>
-                      </div>
-                      <div class="field has-text-left mt1">
-                        <label class="label">Jenis Program</label>
-                        <input class="is-checkradio is-info" id="kurban" type="checkbox" name="kurban" checked="checked">
-                        <label for="kurban" class="no-margin">Qurban</label>
-                        <input class="is-checkradio is-info" id="akikah" type="checkbox" name="akikah">
-                        <label for="akikah" class="no-margin">Aqiqah</label>
-                      </div>
-                      <div class="field mt2-25">
-                        <label class="label has-text-left">Alamat Peternakan</label>
-                        <div class="control">
-                          <textarea class="textarea" placeholder="Alamat Peternakan"></textarea>
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Pin Alamat (opsional)</label>
-                        <div class="pin-point relative">
-                          <a href="#" class="button btn-map">Ubah Lokasi</a>
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Upload Foto Peternakan</label>
-                        <div class="pic-ternak pointer">
-                          <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 67.5" width="50">
-                              <defs>
-                                <style>
-                                  .pic-ternak {
-                                    fill: #a7a7a7;
-                                  }
-                                </style>
-                              </defs>
-                              <g id="camera" transform="translate(0 -25.5)">
-                                <g id="camera-alt" transform="translate(0 25.5)">
-                                  <circle id="Ellipse_71" data-name="Ellipse 71" class="pic-ternak" cx="12" cy="12" r="12" transform="translate(25.5 25.5)"/>
-                                  <path id="Path_31604" data-name="Path 31604" class="pic-ternak" d="M26.25,25.5,19.5,33H7.5A7.522,7.522,0,0,0,0,40.5v45A7.522,7.522,0,0,0,7.5,93h60A7.522,7.522,0,0,0,75,85.5v-45A7.522,7.522,0,0,0,67.5,33h-12l-6.75-7.5ZM37.5,81.75A18.75,18.75,0,1,1,56.25,63,18.568,18.568,0,0,1,37.5,81.75Z" transform="translate(0 -25.5)"/>
-                                </g>
-                              </g>
-                            </svg>
-                            <div>File format: jpg atau png</div>
+                          <div class="select is-fullwidth">
+                            <select>
+                              <option value="UD Sumber Jaya">UD Sember Jaya</option>
+                            </select>
                           </div>
+                        </div>
+                      </div>
+                      <div class="field mt1">
+                        <label class="label has-text-left">Panjang</label>
+                        <div class="control">
+                          <input class="input" type="email" placeholder="contoh: 20cm">
+                        </div>
+                      </div>
+                      <div class="field mt1">
+                        <label class="label has-text-left">Lingkar Dada</label>
+                        <div class="control">
+                          <input class="input" type="email" placeholder="contoh: 200cm">
+                        </div>
+                      </div>
+                      <div class="field mt1">
+                        <label class="label has-text-left">Harga</label>
+                        <div class="control">
+                          <input class="input" type="email" readonly value="Rp 25.000.000 ~ Rp 30.000.000">
                         </div>
                       </div>
                     </div>
@@ -158,138 +178,6 @@
                 </div>
               </div>
             </div>
-            <!-- usaha -->
-            <div class="badanusaha none">
-              <div class="columns is-centered mt1">
-                <div class="column is-8">
-                  <div class="columns">
-                    <div class="column">
-                      <div class="field mt1">
-                        <label class="label has-text-left">Nama Badan Usaha</label>
-                        <div class="control">
-                          <input class="input" type="text" placeholder="Nama Badan Usaha">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="column">
-                      <div class="field mt1">
-                        <label class="label has-text-left">Nomor SIUP</label>
-                        <div class="control">
-                          <input class="input" type="text" placeholder="Nomor SIUP">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="columns">
-                    <div class="column">
-                      <div class="field mt1">
-                        <label class="label has-text-left">Nama Penanggung Jawab</label>
-                        <div class="control">
-                          <input class="input" type="text" placeholder="Nama Penanggung Jawab">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">NIK KTP</label>
-                        <div class="control">
-                          <input class="input" type="number" placeholder="NIK KTP">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Email</label>
-                        <div class="control">
-                          <input class="input" type="email" placeholder="Email Anda">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">No Handphone / Telpon</label>
-                        <div class="control">
-                          <input class="input" type="number" placeholder="No Handphone / Telpon">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">NPWP</label>
-                        <div class="control">
-                          <input class="input" type="number" placeholder="NPWP">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Nomor Rekening</label>
-                        <div class="control">
-                          <input class="input" type="number" placeholder="Nomor Rekening">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Rekening Atas Nama</label>
-                        <div class="control">
-                          <input class="input" type="number" placeholder="Rekening Atas Nama">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="column">
-                      <div class="field mt1">
-                        <label class="label has-text-left">Nama Peternakan</label>
-                        <div class="control">
-                          <input class="input" type="text" placeholder="Nama Peternakan">
-                        </div>
-                      </div>
-                      <div class="field has-text-left mt1">
-                        <label class="label">Komoditas Hewan</label>
-                        <input class="is-checkradio is-info" id="sapi" type="checkbox" name="sapi" checked="checked">
-                        <label for="sapi" class="no-margin">Sapi</label>
-                        <input class="is-checkradio is-info" id="kambing" type="checkbox" name="kambing">
-                        <label for="kambing" class="no-margin">Kambing</label>
-                        <input class="is-checkradio is-info" id="domba" type="checkbox" name="domba">
-                        <label for="domba" class="no-margin">Domba</label>
-                      </div>
-                      <div class="field has-text-left mt1">
-                        <label class="label">Jenis Program</label>
-                        <input class="is-checkradio is-info" id="kurban" type="checkbox" name="kurban" checked="checked">
-                        <label for="kurban" class="no-margin">Qurban</label>
-                        <input class="is-checkradio is-info" id="akikah" type="checkbox" name="akikah">
-                        <label for="akikah" class="no-margin">Aqiqah</label>
-                      </div>
-                      <div class="field mt2-25">
-                        <label class="label has-text-left">Alamat Peternakan</label>
-                        <div class="control">
-                          <textarea class="textarea" placeholder="Alamat Peternakan"></textarea>
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Pin Alamat (opsional)</label>
-                        <div class="pin-point relative">
-                          <a href="#" class="button btn-map">Ubah Lokasi</a>
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Upload Foto Peternakan</label>
-                        <div class="pic-ternak pointer">
-                          <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 67.5" width="50">
-                              <defs>
-                                <style>
-                                  .pic-ternak {
-                                    fill: #a7a7a7;
-                                  }
-                                </style>
-                              </defs>
-                              <g id="camera" transform="translate(0 -25.5)">
-                                <g id="camera-alt" transform="translate(0 25.5)">
-                                  <circle id="Ellipse_71" data-name="Ellipse 71" class="pic-ternak" cx="12" cy="12" r="12" transform="translate(25.5 25.5)"/>
-                                  <path id="Path_31604" data-name="Path 31604" class="pic-ternak" d="M26.25,25.5,19.5,33H7.5A7.522,7.522,0,0,0,0,40.5v45A7.522,7.522,0,0,0,7.5,93h60A7.522,7.522,0,0,0,75,85.5v-45A7.522,7.522,0,0,0,67.5,33h-12l-6.75-7.5ZM37.5,81.75A18.75,18.75,0,1,1,56.25,63,18.568,18.568,0,0,1,37.5,81.75Z" transform="translate(0 -25.5)"/>
-                                </g>
-                              </g>
-                            </svg>
-                            <div>File format: jpg atau png</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             <div class="field mt2">
               <a href="daftar.html" class="button btn-akadQ w-250">Lanjutkan</a>
             </div>
