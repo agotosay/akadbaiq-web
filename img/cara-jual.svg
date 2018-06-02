@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 210">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke-width: 7px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #00aeef;
+      }
+
+      .cls-2 {
+        fill: #00aeef;
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_33623" data-name="Group 33623" transform="translate(-752.133 -7354)">
+    <g id="Ellipse_112" data-name="Ellipse 112" class="cls-1" transform="translate(752.133 7354)">
+      <circle class="cls-3" cx="105" cy="105" r="105"/>
+      <circle class="cls-4" cx="105" cy="105" r="101.5"/>
+    </g>
+    <g id="shopping-bag" transform="translate(808.604 7388.326)">
+      <path id="Path_32245" data-name="Path 32245" class="cls-2" d="M100.155,106.329H6.178a1.992,1.992,0,0,1-1.989-2.084L8.665,10.268a1.987,1.987,0,0,1,1.989-1.893H95.68a1.99,1.99,0,0,1,1.989,1.893l4.475,93.976a1.992,1.992,0,0,1-1.989,2.084ZM8.263,102.351h89.8l-4.284-90H12.547Z" transform="translate(-4.188 24.939)"/>
+      <path id="Path_32246" data-name="Path 32246" class="cls-2" d="M55.584,45.248A1.99,1.99,0,0,1,53.6,43.259V23.489a19.511,19.511,0,0,0-39.023,0v19.77a1.989,1.989,0,1,1-3.978,0V23.489a23.489,23.489,0,0,1,46.978,0v19.77A1.987,1.987,0,0,1,55.584,45.248Z" transform="translate(14.893)"/>
+    </g>
+  </g>
+</svg>
