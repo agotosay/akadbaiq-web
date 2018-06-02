@@ -162,22 +162,22 @@
               </div>
               <div class="field mt2">
                 <div class="control">
-                  <input class="input is-primary" type="text" placeholder="Nama Lengkap">
+                  <input class="input is-primary inp_name" type="text" placeholder="Nama Lengkap">
                 </div>
               </div>
               <div class="field mt1">
                 <div class="control">
-                  <input class="input is-primary" type="text" placeholder="Email Anda">
+                  <input class="input is-primary inp_email" type="text" placeholder="Email Anda">
                 </div>
               </div>
               <div class="field mt1">
                 <div class="control">
-                  <input class="input is-primary" type="text" placeholder="Nomor Hanphone / Telpon">
+                  <input class="input is-primary inp_phone" type="text" placeholder="Nomor Hanphone / Telpon">
                 </div>
               </div>
               <div class="field mt1">
                 <div class="control relative">
-                  <input class="input is-primary" type="text" placeholder="Password">
+                  <input class="input is-primary inp_pass" type="text" placeholder="Password">
                   <div class="eye-pass">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 24" width="20">
                       <defs>
@@ -198,7 +198,7 @@
               </div>
               <div class="field mt1">
                 <div class="control relative">
-                  <input class="input is-primary" type="text" placeholder="Ulangi Password">
+                  <input class="input is-primary inp_repass" type="text" placeholder="Ulangi Password">
                   <div class="eye-pass">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 24" width="20">
                       <defs>
@@ -218,7 +218,7 @@
                 </div>
               </div>
               <div class="field mt1">
-                <a href="home-login.html" class="button btn-akadQ is-fullwidth">Daftar</a>
+                <a  class="button btn-akadQ is-fullwidth regis_btn">Daftar</a>
               </div>
             
           </div>
@@ -259,27 +259,50 @@
       </div>
     </div>
   </section>
-  <script src="js/swiper.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
-      var swiper1 = new Swiper('.swiper1', {
-        slidesPerView: 1,
-        loop: true,
-        autoplay: true,
-        pagination: {
-          el: '.swiper-pagination.pag1',
-          clickable: true,
-        },
-      });
-      var swiper2 = new Swiper('.swiper2', {
-        slidesPerView: 5,
-        loop: true,
-        autoplay: true,
-        spaceBetween: 50,
-        pagination: {
-          el: '.swiper-pagination.pag2',
-          clickable: true,
-        },
-      });
-    </script>
+    var username;
+    var password;
+    var repassword;
+    var fullName;
+    var phoneNumber;
+
+    $(document).ready(function(){
+
+      $(".regis_btn").click(register)
+
+      function register(){
+        username =$(".inp_email").val();
+        password = $(".inp_pass").val();
+        repassword= $(".inp_repass").val();
+        fullName =$(".inp_name").val();
+        phoneNumber =$(".inp_phone").val();
+
+        if(password==repassword){
+          $.ajax({
+            method: "POST",
+            url: "http://103.253.107.139/api/auth/register",
+                //type:"json",
+                data: {
+                  username: username,
+                  password: password,
+                  fullName : fullName,
+                  phoneNumber:phoneNumber
+                },
+                success:function( response ) {
+                  localStorage.aq_login_status ="login";
+                  alert("Register berhasil");
+                  window.location="home.html";
+                },
+                error:function(er){alert(er.responseJSON.error_description);}
+              });
+        }else{
+          alert("Password belum sesuai")
+        }
+      }
+
+    })
+  </script>
 </body>
 </html>
