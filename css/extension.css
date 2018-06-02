@@ -108,7 +108,7 @@
 .is-checkradio[type=checkbox]:checked+label:before,
 .is-checkradio[type=radio]:checked+label::before,
 .is-checkradio[type=radio]:checked+label:before {
-	border: .1rem solid #dbdbdb
+	border: .1rem solid #00AEEF
 }
 
 .is-checkradio[type=checkbox]:checked[disabled],

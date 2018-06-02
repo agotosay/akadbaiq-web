@@ -77,7 +77,7 @@
                     <p>Anda belum memiliki akun</p>
                   </div>
                   <div class="field">
-                    <a href="daftar.html" class="button btn-akadQ is-fullwidth">Daftar</a>
+                    <a href="daftar.html" class="button btn-akadQ is-fullwidth register_btn">Daftar</a>
                   </div>
                   <div class="field">
                     <div class="small is-text-blue">
@@ -135,7 +135,7 @@
                 </svg>
                 <span>Hubungi Kami</span>
               </div>
-              <div class="navbar-item pointer">
+              <div class="navbar-item pointer none account_box">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" class="mr0h">
                   <defs>
                     <style>
@@ -185,16 +185,16 @@
           </div>
           <div class="field">
             <div class="control">
-              <input class="input is-primary" type="text" placeholder="Email">
+              <input class="input is-primary inp_email" type="text" placeholder="Email" />
             </div>
           </div>
           <div class="field">
             <div class="control">
-              <input class="input is-primary" type="password" placeholder="Password">
+              <input class="input is-primary" id="inp_password" type="password" placeholder="Password" />
             </div>
           </div>
           <div class="field">
-            <a class="button btn-akadQ is-fullwidth">Masuk ke AkadbaiQ</a>
+            <a class="button btn-akadQ is-fullwidth login_btn">Masuk ke AkadbaiQ</a>
           </div>
           <div class="field">
             <label class="checkbox">
@@ -639,7 +639,82 @@
     //click
     $('.peternak').on('click', function(){
       $('.menu-ternak').toggle()
-    })
+    });
+	
+	
+	$('.menu-ternak').on('mouseleave', function(){
+      $('.menu-ternak').toggle()
+    });
+	
+	
+	if(localStorage.aq_login_status=="login"){
+		$(".box-login").hide();
+		$(".account_box").css("display","flex");
+		$(".register_btn").html("Ajukan Kemitraan");
+		$(".menu-ternak").find("a").attr("href","pengajuan-mitra1.html");
+	}
+	
+	//localStorage.aq_login_status="";
+	/* LOGIN */
+		
+	var email
+	var pass
+	
+	
+	var client_id = "my-client";
+	var grant_type = "password";
+	var client_secret = "qweqwe";
+	var scope = "read";
+	var data = {}	
+	
+	
+	
+	
+	$(".inp_email").keyup(function(){
+		email = $(this).val();
+	});
+	
+	$("#inp_password").keyup(function(){
+		pass = $(this).val();
+	})
+	$(document).ready(function(){
+		
+		
+		$(".login_btn").click(login);
+		
+		
+		function login(){
+			alert(pass);
+			email=$(".inp_email").val() ;
+			pass= $("#inp_password").val();
+			$.ajax({
+			  method: "POST",
+			  url: "http://103.253.107.139/oauth/token",
+			  //type:"json",
+			  data: {
+					username: email,
+					password: pass,
+					client_id : client_id,
+					grant_type : grant_type,
+					client_secret:client_secret,
+					scope:scope
+				},
+			  success:function( response ) {
+				$(".box-login").hide();
+				$(".account_box").css("display","flex");
+				localStorage.aq_login_status ="login";
+				$(".menu-ternak").find("a").attr("href","pengajuan-mitra1.html");
+				$(".register_btn").html("Ajukan Kemitraan");
+			  },
+			  error:function(er){alert(er.responseJSON.error_description);}
+			});			
+	}
+	})
+	
+	
+	
+	
+	
   </script>
 </body>
 </html>
