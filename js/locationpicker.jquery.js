@@ -432,7 +432,7 @@
         });
     };
     $.fn.locationpicker.defaults = {
-        location: {latitude: 40.7324319, longitude: -73.82480777777776},
+        location: {latitude: -6.17511, longitude: 106.86503949999997},
         locationName: "",
         radius: 500,
         zoom: 15,

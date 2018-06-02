@@ -573,7 +573,7 @@ hr {
 	transform: translateY(-50%) translateX(-50%);
 }
 .pin-point {
-	height: 120px;
+	height: 100px;
 	background-image: url('../img/display-map.jpg');
 	border-radius: 5px;
 }
@@ -587,5 +587,19 @@ hr {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+.point-map .modal-card-head {
+	border-radius: 0;
+	background: #fff;
+	padding: 1rem;
+}
+.point-map .modal-card-body {
+	padding: 0;
+}
+.point-map .modal-card {
+	width: 500px
+}
+.point-map .delete {
+	background: #00AEEF
 }
 /*end mitra*/
