@@ -141,7 +141,7 @@ button, input, select, textarea {
 	margin-bottom: .5rem !important;
 }
 .mb-75 {
-	margin-bottom: .75rem !important;
+	margin-bottom: -.75rem !important;
 }
 .mb4 {
 	margin-bottom: 4rem !important;
@@ -161,6 +161,9 @@ button, input, select, textarea {
 .mb-0h {
 	margin-bottom: -.5rem !important;
 }
+.mb-1 {
+	margin-bottom: -1rem !important;
+}
 .ml0 {
 	margin-left: 0 !important;
 }
@@ -172,6 +175,9 @@ button, input, select, textarea {
 }
 .ml1 {
 	margin-left: 1rem !important;
+}
+.ml3 {
+	margin-left: 3rem !important;
 }
 .mr0 {
 	margin-right: 0 !important;
@@ -404,7 +410,6 @@ hr {
 }
 .grade-info {
 	display: flex;
-	padding-left: 3rem;
 	align-items: flex-end;
 }
 .grade-info li {
@@ -412,11 +417,20 @@ hr {
 	text-transform: uppercase;
 	cursor:pointer;
 	font-size: 1rem;
+	text-align: center;
+	border-bottom: 1px solid #D6D6D6;
 }
 .grade-info li.is-active {
 	font-weight: 600;
 	color: #00AEEF;
 	font-size: 1.25rem;
+	border-bottom: 3px solid #00AEEF;
+}
+.table-grade {
+	margin-top: 2rem;
+}
+.table-grade td:first-child {
+	width: 50%;
 }
 .hero-body {
 	padding: 3rem 0;
@@ -668,3 +682,16 @@ hr {
 	cursor: pointer;
 }
 /*end mitra*/
+
+
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	z-index: -1;
+}
+#file {
+	height: 0;
+}

@@ -439,24 +439,133 @@
               </div>
             </div>
             <div class="field">
-              <a class="button btn-akadQ is-fullwidth mt2">Cari</a>
+              <a class="button btn-akadQ is-fullwidth mt2" onclick="cariternak()">Cari</a>
             </div>
           </div>
         </div>
         <div class="column pl4">
           <!-- no data -->
-          <div class="no-data-estimasi none">
-            <img src="img/sapi.png" width="50%">
-            <div class="content text-no-data is-size-3 has-text-centered">
-              Lakukan Pencarian hewan ternak <br>yang Anda cari
+          <div class="box-no-data">
+            <div class="no-data-estimasi">
+              <img src="img/sapi.png" width="50%">
+              <div class="content text-no-data is-size-3 has-text-centered">
+                Lakukan Pencarian hewan ternak <br>yang Anda cari
+              </div>
             </div>
           </div>
           <!-- data -->
-          <ul class="grade-info">
-            <li class="is-active">Grade A</li>
-            <li>Grade B</li>
-            <li>Grade C</li>
-          </ul>
+          <div class="box-have-data none">
+            <ul class="grade-info">
+              <li class="menu-grade is-active" id="menugrade1" onclick="selectgrade(1)">Grade A</li>
+              <li class="menu-grade" id="menugrade2" onclick="selectgrade(2)">Grade B</li>
+              <li class="menu-grade" id="menugrade3" onclick="selectgrade(3)">Grade C</li>
+            </ul>
+            <!-- grade a -->
+            <div class="grade" id="tablegrade1">
+              <table class="table table-grade is-fullwidth is-striped">
+                <tbody>
+                  <tr>
+                    <td>Jumlah</td>
+                    <td>: &nbsp;8ekor</td>
+                  </tr>
+                  <tr>
+                    <td>Umur</td>
+                    <td>: &nbsp;2 ~ 3tahun</td>
+                  </tr>
+                  <tr>
+                    <td>Panjang</td>
+                    <td>: &nbsp;80 ~ 100cm</td>
+                  </tr>
+                  <tr>
+                    <td>Tinggi</td>
+                    <td>: &nbsp;40cm ~ 50cm</td>
+                  </tr>
+                  <tr>
+                    <td>Lingkar Dada</td>
+                    <td>: &nbsp;120  - 160cm</td>
+                  </tr>
+                  <tr>
+                    <td>Berat</td>
+                    <td>: &nbsp;55 ~ 90kg</td>
+                  </tr>
+                  <tr>
+                    <td>Harga</td>
+                    <td>: &nbsp;Rp 2.500.000 ~ Rp 3.500.000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- grade b -->
+            <div class="grade none" id="tablegrade2">
+              <table class="table table-grade is-fullwidth is-striped">
+                <tbody>
+                  <tr>
+                    <td>Jumlah</td>
+                    <td>: &nbsp;2ekor</td>
+                  </tr>
+                  <tr>
+                    <td>Umur</td>
+                    <td>: &nbsp;2 ~ 2.5tahun</td>
+                  </tr>
+                  <tr>
+                    <td>Panjang</td>
+                    <td>: &nbsp;70 ~ 80cm</td>
+                  </tr>
+                  <tr>
+                    <td>Tinggi</td>
+                    <td>: &nbsp;30cm ~ 40cm</td>
+                  </tr>
+                  <tr>
+                    <td>Lingkar Dada</td>
+                    <td>: &nbsp;100  - 120cm</td>
+                  </tr>
+                  <tr>
+                    <td>Berat</td>
+                    <td>: &nbsp;50 ~ 70kg</td>
+                  </tr>
+                  <tr>
+                    <td>Harga</td>
+                    <td>: &nbsp;Rp 2.000.000 ~ Rp 2.500.000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- grade c -->
+            <div class="grade none" id="tablegrade3">
+              <table class="table table-grade is-fullwidth is-striped">
+                <tbody>
+                  <tr>
+                    <td>Jumlah</td>
+                    <td>: &nbsp;12ekor</td>
+                  </tr>
+                  <tr>
+                    <td>Umur</td>
+                    <td>: &nbsp;1 ~ 2tahun</td>
+                  </tr>
+                  <tr>
+                    <td>Panjang</td>
+                    <td>: &nbsp;50 ~ 70cm</td>
+                  </tr>
+                  <tr>
+                    <td>Tinggi</td>
+                    <td>: &nbsp;20cm ~ 30cm</td>
+                  </tr>
+                  <tr>
+                    <td>Lingkar Dada</td>
+                    <td>: &nbsp;80  - 100cm</td>
+                  </tr>
+                  <tr>
+                    <td>Berat</td>
+                    <td>: &nbsp;25 ~ 50kg</td>
+                  </tr>
+                  <tr>
+                    <td>Harga</td>
+                    <td>: &nbsp;Rp 1.000.000 ~ Rp 2.000.000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -695,12 +804,33 @@
       $('.menu-akun').toggle()
     })
 
-    $('.grade-info').on('click', 'li', function(){
-      if($(this).closest('li').hasClass('is-active')) {
-        $(this).closest('li').removeClass('is-active')
-      } else {
-        $(this).closest('li').addClass('is-active')
-      }
+    function cariternak() {
+      $('.box-no-data').addClass('none')
+      $('.box-have-data').addClass('block')
+      $('.box-have-data').removeClass('none')
+    }
+
+    function selectgrade(id){
+      $div = $('#menugrade'+id).addClass('is-active');
+      $('.menu-grade').not($div).removeClass('is-active');
+    }
+    $('#menugrade1').click(function(){
+      $('#tablegrade1').addClass('block')
+      $('#tablegrade1').removeClass('none')
+      $('#tablegrade2').addClass('none')
+      $('#tablegrade3').addClass('none')
+    })
+    $('#menugrade2').click(function(){
+      $('#tablegrade2').addClass('block')
+      $('#tablegrade2').removeClass('none')
+      $('#tablegrade1').addClass('none')
+      $('#tablegrade3').addClass('none')
+    })
+    $('#menugrade3').click(function(){
+      $('#tablegrade3').addClass('block')
+      $('#tablegrade3').removeClass('none')
+      $('#tablegrade1').addClass('none')
+      $('#tablegrade2').addClass('none')
     })
 
     if(localStorage.aq_login_status=="login"){

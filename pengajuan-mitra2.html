@@ -103,7 +103,7 @@
                       <div class="field mt1">
                         <label class="label has-text-left">Rekening Atas Nama</label>
                         <div class="control">
-                          <input class="input" type="number" placeholder="Rekening Atas Nama">
+                          <input class="input" type="text" placeholder="Rekening Atas Nama">
                         </div>
                       </div>
                     </div>
@@ -114,14 +114,26 @@
                           <input class="input" type="text" placeholder="Nama Peternakan">
                         </div>
                       </div>
-                      <div class="field has-text-left mt1">
-                        <label class="label">Komoditas Hewan</label>
-                        <input class="is-checkradio is-info" id="sapi" type="checkbox" name="sapi" checked="checked">
-                        <label for="sapi" class="no-margin">Sapi</label>
-                        <input class="is-checkradio is-info" id="kambing" type="checkbox" name="kambing">
-                        <label for="kambing" class="no-margin">Kambing</label>
-                        <input class="is-checkradio is-info" id="domba" type="checkbox" name="domba">
-                        <label for="domba" class="no-margin">Domba</label>
+                      <div class="field mt1">
+                        <label class="label has-text-left">Jenis Komoditas</label>
+                        <div class="control">
+                          <div class="select is-fullwidth">
+                            <select>
+                              <optgroup label="Sapi">
+                                <option value="Sapi Jawa">Sapi Jawa</option>
+                                <option value="Sapi Limosin">Sapi Limosin</option>
+                              </optgroup>
+                              <optgroup label="Kambing">
+                                <option value="Kambing Etawa">Kambing Etawa</option>
+                                <option value="Kambing Kacang">Kambing Kacang</option>
+                              </optgroup>
+                              <optgroup label="Domba">
+                                <option value="Kambing Etawa">Domba Garut</option>
+                                <option value="Kambing Kacang">Domba Batur</option>
+                              </optgroup>
+                            </select>
+                          </div>
+                        </div>
                       </div>
                       <div class="field has-text-left mt1">
                         <label class="label">Jenis Program</label>
@@ -143,27 +155,30 @@
                         </div>
                       </div>
                       <div class="field mt1">
-                        <label class="label has-text-left">Upload Foto Peternakan</label>
-                        <div class="pic-ternak pointer">
-                          <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 67.5" width="50">
-                              <defs>
-                                <style>
-                                  .pic-ternak {
-                                    fill: #a7a7a7;
-                                  }
-                                </style>
-                              </defs>
-                              <g id="camera" transform="translate(0 -25.5)">
-                                <g id="camera-alt" transform="translate(0 25.5)">
-                                  <circle id="Ellipse_71" data-name="Ellipse 71" class="pic-ternak" cx="12" cy="12" r="12" transform="translate(25.5 25.5)"/>
-                                  <path id="Path_31604" data-name="Path 31604" class="pic-ternak" d="M26.25,25.5,19.5,33H7.5A7.522,7.522,0,0,0,0,40.5v45A7.522,7.522,0,0,0,7.5,93h60A7.522,7.522,0,0,0,75,85.5v-45A7.522,7.522,0,0,0,67.5,33h-12l-6.75-7.5ZM37.5,81.75A18.75,18.75,0,1,1,56.25,63,18.568,18.568,0,0,1,37.5,81.75Z" transform="translate(0 -25.5)"/>
+                        <label class="label has-text-left mb-75">Upload Foto Peternakan</label>
+                        <input type="file" class="inputfile inputfile-2" id="file" >
+                        <label for="file">
+                          <div class="pic-ternak pointer">
+                            <div>
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 67.5" width="50">
+                                <defs>
+                                  <style>
+                                    .pic-ternak {
+                                      fill: #a7a7a7;
+                                    }
+                                  </style>
+                                </defs>
+                                <g id="camera" transform="translate(0 -25.5)">
+                                  <g id="camera-alt" transform="translate(0 25.5)">
+                                    <circle id="Ellipse_71" data-name="Ellipse 71" class="pic-ternak" cx="12" cy="12" r="12" transform="translate(25.5 25.5)"/>
+                                    <path id="Path_31604" data-name="Path 31604" class="pic-ternak" d="M26.25,25.5,19.5,33H7.5A7.522,7.522,0,0,0,0,40.5v45A7.522,7.522,0,0,0,7.5,93h60A7.522,7.522,0,0,0,75,85.5v-45A7.522,7.522,0,0,0,67.5,33h-12l-6.75-7.5ZM37.5,81.75A18.75,18.75,0,1,1,56.25,63,18.568,18.568,0,0,1,37.5,81.75Z" transform="translate(0 -25.5)"/>
+                                  </g>
                                 </g>
-                              </g>
-                            </svg>
-                            <div>File format: jpg atau png</div>
+                              </svg>
+                            </div>
                           </div>
-                        </div>
+                        </label>
+                        <div id="filename" class="mt0h">File format: jpg atau png</div>
                       </div>
                     </div>
                   </div>
@@ -274,27 +289,30 @@
                         </div>
                       </div>
                       <div class="field mt1">
-                        <label class="label has-text-left">Upload Foto Peternakan</label>
-                        <div class="pic-ternak pointer">
-                          <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 67.5" width="50">
-                              <defs>
-                                <style>
-                                  .pic-ternak {
-                                    fill: #a7a7a7;
-                                  }
-                                </style>
-                              </defs>
-                              <g id="camera" transform="translate(0 -25.5)">
-                                <g id="camera-alt" transform="translate(0 25.5)">
-                                  <circle id="Ellipse_71" data-name="Ellipse 71" class="pic-ternak" cx="12" cy="12" r="12" transform="translate(25.5 25.5)"/>
-                                  <path id="Path_31604" data-name="Path 31604" class="pic-ternak" d="M26.25,25.5,19.5,33H7.5A7.522,7.522,0,0,0,0,40.5v45A7.522,7.522,0,0,0,7.5,93h60A7.522,7.522,0,0,0,75,85.5v-45A7.522,7.522,0,0,0,67.5,33h-12l-6.75-7.5ZM37.5,81.75A18.75,18.75,0,1,1,56.25,63,18.568,18.568,0,0,1,37.5,81.75Z" transform="translate(0 -25.5)"/>
+                        <label class="label has-text-left mb-75">Upload Foto Peternakan</label>
+                        <input type="file" class="inputfile inputfile-2" id="file" >
+                        <label for="file">
+                          <div class="pic-ternak pointer">
+                            <div>
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 67.5" width="50">
+                                <defs>
+                                  <style>
+                                    .pic-ternak {
+                                      fill: #a7a7a7;
+                                    }
+                                  </style>
+                                </defs>
+                                <g id="camera" transform="translate(0 -25.5)">
+                                  <g id="camera-alt" transform="translate(0 25.5)">
+                                    <circle id="Ellipse_71" data-name="Ellipse 71" class="pic-ternak" cx="12" cy="12" r="12" transform="translate(25.5 25.5)"/>
+                                    <path id="Path_31604" data-name="Path 31604" class="pic-ternak" d="M26.25,25.5,19.5,33H7.5A7.522,7.522,0,0,0,0,40.5v45A7.522,7.522,0,0,0,7.5,93h60A7.522,7.522,0,0,0,75,85.5v-45A7.522,7.522,0,0,0,67.5,33h-12l-6.75-7.5ZM37.5,81.75A18.75,18.75,0,1,1,56.25,63,18.568,18.568,0,0,1,37.5,81.75Z" transform="translate(0 -25.5)"/>
+                                  </g>
                                 </g>
-                              </g>
-                            </svg>
-                            <div>File format: jpg atau png</div>
+                              </svg>
+                            </div>
                           </div>
-                        </div>
+                        </label>
+                        <div id="filename" class="mt0h">File format: jpg atau png</div>
                       </div>
                     </div>
                   </div>
@@ -331,6 +349,18 @@
     $('.delete').click(function(){
       $('.point-map').removeClass('is-active')
     })
+
+    var file = document.getElementById("file");
+    file.onchange = function(){
+        if(file.files.length > 0)
+        {
+          $('#filename').text(file.files[0].name);
+          $('.pic-ternak svg').addClass('none');
+          $('.pic-ternak').css('background-image', 'url(img/banner-1.jpg)');
+          $('.pic-ternak').css('background-size', 'cover');
+        }
+    };
+
   </script>
   
 </body>
