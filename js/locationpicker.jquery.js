@@ -4,6 +4,7 @@
      * Holds google map object and related utility entities.
      * @constructor
      */
+	 var  geodecoder =  new google.maps.Geocoder()
     function GMapContext(domElement, options) {
         var _map = new google.maps.Map(domElement, options);
         var _marker = new google.maps.Marker({
@@ -452,7 +453,27 @@
         addressFormat: 'postal_code',
         enableReverseGeocode: true,
         draggable: true,
-        onchanged: function(currentLocation, radius, isMarkerDropped) {},
+        onchanged: function(currentLocation, radius, isMarkerDropped) {
+			console.log(currentLocation);
+			var lat = currentLocation.latitude
+			var longs = currentLocation.longitude
+			console.log(lat+' '+longs)
+			geodecoder.geocode({
+				'latLng': new google.maps.LatLng({lat: lat, lng: longs})
+			}, function (results, status) {
+				if (status ==
+					google.maps.GeocoderStatus.OK) {
+					if (results[0]) {
+						//alert(results[0].formatted_address);
+						$(".inp_alamatp").val(results[0].formatted_address);
+					} else {
+						alert('No results found');
+					}
+				} else {
+					alert('Geocoder failed due to: ' + status);
+				}
+			});
+		},
         onlocationnotfound: function(locationName) {},
         oninitialized: function (component) {},
         // must be undefined to use the default gMaps marker
