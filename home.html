@@ -73,7 +73,7 @@
                   <span>Peternak</span>
                 </div>
                 <div class="menu-ternak">
-                  <div class="content mb-75">
+                  <div class="content mb0h">
                     <p>Anda belum memiliki akun</p>
                   </div>
                   <div class="field">
@@ -833,6 +833,21 @@
       $('#tablegrade2').addClass('none')
     })
 
+    // if(localStorage.aq_mitra_status=="ok"){
+    //   $(".menu-ternak").html('<div class="content mb0h">'+
+    //                 '<p>Dashboard</p>'+
+    //               '</div>'+
+    //               '<div class="content mb0h">'+
+    //                 '<p>Pengaturan Hewan</p>'+
+    //               '</div>'+
+    //               '<div class="content mb0h">'+
+    //                 '<p>Pengaturan Ternak</p>'+
+    //               '</div>'+
+    //               '<div class="content mb0h">'+
+    //                 '<p>Transaksi Anda</p>'+
+    //               '</div>')
+    // }
+
     if(localStorage.aq_login_status=="login"){
         $(".box-login").hide();
         $(".account_box").css("display","flex");
@@ -890,7 +905,7 @@
             localStorage.aq_login_status ="login";
             $(".menu-ternak").find("a").attr("href","pengajuan-mitra1.html");
             $(".register_btn").html("Ajukan Kemitraan");
-            $(".box-buy").css("display","block")
+            $(".box-buy").css("display","block");
             },
             error:function(er){alert(er.responseJSON.error_description);}
           });     

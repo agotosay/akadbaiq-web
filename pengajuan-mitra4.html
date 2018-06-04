@@ -63,7 +63,7 @@
               </div>
             </div>
             <div class="field mt2">
-              <a href="home.html" class="button btn-akadQ w-250">Kembali Ke Dashboard</a>
+              <a  class="button btn-akadQ w-250 btn_done">Kembali Ke Dashboard</a>
             </div>
           </div>
         </div>
@@ -84,6 +84,11 @@
       $('.badanusaha').css('display', 'block')
       $('.pribadi').css('display', 'none')
     }
+
+    $(".btn_done").click(function(){
+      localStorage.aq_mitra_status="ok";
+      window.location="home.html"
+    })
 
     $('.btn-map').click(function(){
       $('.point-map').addClass('is-active')
