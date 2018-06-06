@@ -31,7 +31,7 @@
                   </span>
                 </a>
                 <ul class="sub-menus none">
-                  <li><a href="mitra-tambah-hewan.html">Tambah Ternak</a></li>
+                  <li><a href="mitra-tambah-hewan.html">Tambah Hewan</a></li>
                   <li><a href="mitra-hewan-dijual.html">Hewan Dijual</a></li>
                   <li><a href="mitra-hewan-terjual.html">Sudah Terjual</a></li>
                 </ul>
@@ -420,7 +420,13 @@
     });
 
     function showMenu(){
-      $('.sub-menus').toggle()
+      if($('.sub-menus').hasClass('none')) {
+        $('.sub-menus').addClass('block').removeClass('none');
+        $('.menu-add-hewan svg').css('transform', 'rotate(90deg)')
+      } else {
+         $('.sub-menus').addClass('none').removeClass('block')
+         $('.menu-add-hewan svg').css('transform', 'rotate(0deg)')
+      }
     }
 
     function manual() {

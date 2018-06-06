@@ -327,6 +327,9 @@ button, input, select, textarea {
 .is-text-blue {
 	color: #00AEEF;
 }
+.is-text-red {
+	color: red;
+}
 .is-text-dark,.is-text-dark:hover {
 	color: #363636;
 }
@@ -952,6 +955,58 @@ hr {
 	padding: 1rem;
 }
 .more-detail {
-	padding: 1rem
+	padding: 1rem;
+	padding-top: 0;
+}
+.more-detail .level-item {
+	color: #363636;
+}
+.more-detail .level-item svg {
+	fill: #363636;
+}
+.more-detail .level-item:hover {
+	color: #00AEEF;
+}
+.more-detail .level-item:hover svg{
+	fill: #00AEEF ;
+}
+.box-transaksi + .box-transaksi {
+	margin-top: 1rem;
 }
 /*end transaksi anda*/
+
+
+
+/*dashboard*/
+.box-dashboard  {
+	cursor: pointer;
+}
+.box-icon-dash {
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.icon-dash {
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	background: #fff;
+	border: 1px solid #00AEEF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.icon-dash svg {
+	fill: #fff;	
+}
+.content-dash {
+	height: 70px;
+	background: #00AEEF;
+	color: #fff;
+	text-align: center;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+/*end dashboard*/

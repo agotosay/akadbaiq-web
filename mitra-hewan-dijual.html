@@ -101,7 +101,7 @@
                   </span>
                 </a>
                 <ul class="sub-menus none">
-                  <li><a href="mitra-tambah-hewan.html">Tambah Ternak</a></li>
+                  <li><a href="mitra-tambah-hewan.html">Tambah Hewan</a></li>
                   <li><a href="mitra-hewan-dijual.html">Hewan Dijual</a></li>
                   <li><a href="mitra-hewan-terjual.html">Sudah Terjual</a></li>
                 </ul>
@@ -172,11 +172,17 @@
             </div>
           </nav>
           <!-- content -->
+          <div class="content has-text-centered">
+            <div class="title">
+              Hewan Dijual
+            </div>
+            <p class="subtitle is-size-6 fw300">Berikut daftar hewan yang sudah masuk ke list penjualan AkadBaiQ</p>
+          </div>
           <div class="field">
             <label class="label"></label>
-            <div class="control">
+            <div class="control has-text-centered">
               <div class="select">
-                <select>
+                <select class="w-250">
                   <option value="all">Semua Hewan</option>
                   <option value="sapi">Sapi</option>
                   <option value="kambing">Kambing</option>
@@ -496,7 +502,13 @@
     })
 
     function showMenu(){
-      $('.sub-menus').toggle()
+      if($('.sub-menus').hasClass('none')) {
+        $('.sub-menus').addClass('block').removeClass('none');
+        $('.menu-add-hewan svg').css('transform', 'rotate(90deg)')
+      } else {
+         $('.sub-menus').addClass('none').removeClass('block')
+         $('.menu-add-hewan svg').css('transform', 'rotate(0deg)')
+      }
     }
   </script>
 </body>
