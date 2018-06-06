@@ -659,6 +659,54 @@ hr {
 	color: #fff;
 	padding: 1rem;
 	background: #00AEEF;
+	padding-left: .75rem;
+}
+.menu-list li {
+	border-top: 1px solid #00aeef;
+}
+.menu-list li:first-child {
+	border-top: 1px solid #00aeef;
+}
+.menu-list li:last-child {
+	border-bottom: 1px solid #00aeef;
+}
+.menu-list a svg {
+	fill:#4a4a4a;
+}
+.menu-list a {
+	padding: 1em .75em;
+	border-radius: 0;
+	justify-content: space-between;
+	user-select: none;
+}
+.menu-list a:hover {
+	background: #00AEEF;
+	color: #fff;
+}
+.menu-list a:hover svg {
+	fill: #fff;
+}
+
+.menu-list li ul {
+	border-left: 0;
+	margin: 0;
+	padding: 0;
+}
+.sub-menus li a{
+	background: transparent !important;
+	color: #363636 !important; 
+	padding-left: 2.5rem !important
+}
+.sub-menus li:last-child {
+	border-bottom: 0;
+}
+.sub-menus li a:hover{
+	background: #eeeeee !important;
+	color: #363636 !important; 
+}
+.sub-menus li:hover {
+	background: #eeeeee;
+	color: #363636;
 }
 .label {
 	font-weight: 500;
@@ -775,7 +823,7 @@ hr {
 .box-reason .modal-card {
 	width: 400px
 }
-.detail-farm .delete, .box-reason .delete {
+.detail-farm .delete, .box-reason .delete, .detail-hewan .delete {
 	background: #00AEEF
 }
 .action-button {
@@ -805,3 +853,105 @@ hr {
 	cursor: pointer;
 }
 /*end peternakan*/
+
+
+
+/*tambah hewan*/
+.box-hewan {
+	border: 1px solid #dbdbdb;
+	padding: .5rem;
+}
+.img-hewan img {
+	height: 170px;
+	object-fit: cover;
+	width: 100%;
+}
+.find-detail {
+	background: #00AEEF;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	float: right;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.normal-price {
+	opacity: .75
+}
+.disc-price {
+	font-weight: 500;
+	font-size: 1.15rem;
+}
+.for-button.two .control {
+	width: 50%;
+}
+.for-button .button {
+	background: #00AEEF;
+	color: #fff;
+	border-color: #fff;
+}
+.for-button .button:hover {
+	border-color: #fff;
+	z-index: 0 !important;
+}
+.for-button .button svg{
+	fill: #fff;
+}
+.jenis-transaksi {
+	font-weight: 500;
+	margin-left: 1rem
+}
+.detail-hewan .modal-card-body {
+	padding: 1rem !important;
+}
+.img-ternak-detail img {
+	height: 200px;
+	object-fit:cover;
+}
+.detail-hewan .modal-card-head, .box-reason .modal-card-head {
+	border-radius: 0;
+	background: #fff;
+	padding: 1rem;
+}
+.detail-hewan .modal-card-body, .box-reason .modal-card-body {
+	padding: 0;
+}
+.detail-hewan .modal-card {
+	width: 500px
+}
+.detail-hewan .swiper-slide img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	object-position: top;
+
+}
+.last-update {
+	font-style: italic;
+	font-weight: 500;
+	font-size: .75rem;
+}
+/*end tambah hewan*/
+
+
+
+/*transaki anda*/
+.img-transaksi img {
+	width: 100%;
+	height: 80px;
+	object-fit: cover;
+	object-position: top;
+}
+.info-transaksi {
+	background: #F8F8F8;
+	padding: 1rem;
+}
+.detail-transaksi {
+	padding: 1rem;
+}
+.more-detail {
+	padding: 1rem
+}
+/*end transaksi anda*/

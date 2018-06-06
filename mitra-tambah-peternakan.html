@@ -6,85 +6,20 @@
   <title>AkadBaiQ</title>
   <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/extension.css">
   <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 </head>
 <body>
-  <div class="modal box-reason">
+  <div class="modal point-map">
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title is-size-6 fw600">Alasan kenapa dihapus?</p>
-        <button class="delete del-reason" aria-label="close"></button>
+        <p class="modal-card-title is-size-6">Gunakan Titik Lokasi Anda</p>
+        <button class="delete" aria-label="close"></button>
       </header>
       <section class="modal-card-body">
-        <ul class="reason">
-          <li>Peternakan pindah tempat</li>
-          <li>Stok hewan habis</li>
-          <li>Pergantian pemilik</li>
-          <li>Gulung tikar</li>
-        </ul>
-      </section>
-    </div>
-  </div>
-
-  <div class="modal detail-farm">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title is-size-6 fw600">Detail Peternakan</p>
-        <button class="delete del-detail" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-        <div class="columns">
-          <div class="column is-5">
-            <div class="img-ternak-detail">
-              <img src="img/banner-1.jpg">
-            </div>
-          </div>
-          <div class="column relative">
-            <div class="columns">
-              <div class="column">
-                <div class="content desc-ternak">
-                  <div class="fw500">Bonsle Farm.UD</div>
-                  <div class="small">Depok, Jawa Barat</div>
-                </div>
-                <div class="content desc-ternak">
-                  <div class="fw500">Penanggung Jawab</div>
-                  <div class="small">Dadan Suramdan</div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="content desc-ternak">
-                  <div class="fw500">No Telp/HP</div>
-                  <div class="small">081193337511</div>
-                </div>
-                <div class="content desc-ternak">
-                  <div class="fw500">Email</div>
-                  <div class="small">dadan.suramdan@gmail.com</div>
-                </div>
-              </div>
-            </div>
-            <div class="field has-addons action-button two">
-              <p class="control">
-                <a class="button is-fullwidth">
-                  <span class="icon mr0h">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M5,3C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19H5V5H12V3H5M17.78,4C17.61,4 17.43,4.07 17.3,4.2L16.08,5.41L18.58,7.91L19.8,6.7C20.06,6.44 20.06,6 19.8,5.75L18.25,4.2C18.12,4.07 17.95,4 17.78,4M15.37,6.12L8,13.5V16H10.5L17.87,8.62L15.37,6.12Z" /></svg>
-                  </span>
-                  <span>Edit</span>
-                </a>
-              </p>
-              <p class="control">
-                <a class="button is-fullwidth del-farm">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M21.03,3L18,20.31C17.83,21.27 17,22 16,22H8C7,22 6.17,21.27 6,20.31L2.97,3H21.03M5.36,5L8,20H16L18.64,5H5.36M9,18V14H13V18H9M13,13.18L9.82,10L13,6.82L16.18,10L13,13.18Z" /></svg>
-                  </span>
-                  <span>Hapus</span>
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>        
+        <div id="somecomponent" class="margin-auto" style="width: 500px; height: 400px;"></div>
       </section>
     </div>
   </div>
@@ -98,11 +33,10 @@
           </div>
           <aside class="menu">
             <ul class="menu-list">
-              <li><a>Dashboard</a></li>
-              <li class="is-active"><a>Pengaturan Peternakan</a></li>
-              <li><a>Pengaturan Hewan</a></li>
-              <li><a>Transaksi Anda</a></li>
-            </ul>
+              <li><a href="mitra-dashboard.html">Dashboard</a></li>
+              <li class="is-active"><a href="mitra-pengaturan-peternakan.html">Pengaturan Peternakan</a></li>
+              <li><a href="mitra-pengaturan-hewan.html">Pengaturan Hewan</a></li>
+              <li><a href="mitra-transaksi-anda.html">Transaksi Anda</a></li>
           </aside>
         </div>
       </div>
@@ -167,70 +101,157 @@
             </div>
           </nav>
           <!-- content -->
-          <div class="columns is-multiline">
-            <div class="column is-3">
-              <div class="box-ternak shadow-box">
-                <div class="img-ternak">
-                  <img src="img/banner-1.jpg">
-                </div>
-                <div class="content desc-ternak">
-                  <div class="farm-name fw500">Bonsle Farm.UD</div>
-                  <div class="small">Depok, Jawa Barat</div>
-                </div>
-                <div class="field mt1">
-                  <a href="#" class="button btn-akadQ" onclick="detailFarm()">Lihat Detail</a>
+          <div class="content has-text-centered">
+            <div class="title">
+              Data Peternakan
+            </div>
+            <p class="subtitle is-size-6 fw300">Masukan data-data peternakan Anda dibawah ini secara lengkap</p>
+            <div class="field mt3">
+              <label class="label">Pilih Untuk</label>
+              <input class="is-checkradio is-info" id="pribadi" type="radio" name="radio" checked="checked" onclick="pilih('pribadi')">
+              <label for="pribadi">Pribadi</label>
+              <input class="is-checkradio is-info" id="badanusaha" type="radio" name="radio" onclick="pilih('badanusaha')">
+              <label for="badanusaha">Badan Usaha</label>
+            </div>
+            <!-- pribadi -->
+            <div class="pribadi">
+              <div class="columns is-centered mt1">
+                <div class="column is-8">
+                  <div class="badanusaha none">
+                    <div class="columns">
+                      <div class="column">
+                        <div class="field mt1">
+                          <label class="label has-text-left">Nama Badan Usaha</label>
+                          <div class="control">
+                            <input class="input" type="text" placeholder="Nama Badan Usaha">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="field mt1">
+                          <label class="label has-text-left">Nomor SIUP</label>
+                          <div class="control">
+                            <input class="input" type="text" placeholder="Nomor SIUP">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                  </div>
+                  <div class="columns">
+                    <div class="column">
+                      <div class="field mt1">
+                        <label class="label has-text-left">Nama Penanggung Jawab</label>
+                        <div class="control">
+                          <input class="input inp_name" type="text" placeholder="Nama Penanggung Jawab">
+                        </div>
+                      </div>
+                      <div class="field mt1">
+                        <label class="label has-text-left">NIK KTP</label>
+                        <div class="control">
+                          <input class="input inp_idnumb" type="number" placeholder="NIK KTP">
+                        </div>
+                      </div>
+                      <div class="field mt1">
+                        <label class="label has-text-left">Email</label>
+                        <div class="control">
+                          <input class="input inp_email" type="email" placeholder="Email Anda">
+                        </div>
+                      </div>
+                      <div class="field mt1">
+                        <label class="label has-text-left">No Handphone / Telpon</label>
+                        <div class="control">
+                          <input class="input inp_phone" type="number" placeholder="No Handphone / Telpon">
+                        </div>
+                      </div>
+                      <div class="field mt1">
+                        <label class="label has-text-left">NPWP</label>
+                        <div class="control">
+                          <input class="input inp_npwp" type="number" placeholder="NPWP">
+                        </div>
+                      </div>
+                      <div class="field mt1">
+                        <label class="label has-text-left">Nomor Rekening</label>
+                        <div class="control">
+                          <input class="input inp_accnumb" type="number" placeholder="Nomor Rekening">
+                        </div>
+                      </div>
+                      <div class="field mt1">
+                        <label class="label has-text-left">Rekening Atas Nama</label>
+                        <div class="control">
+                          <input class="input inp_accname" type="text" placeholder="Rekening Atas Nama">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="field mt1">
+                        <label class="label has-text-left">Nama Peternakan</label>
+                        <div class="control">
+                          <input class="input inp_namep" type="text" placeholder="Nama Peternakan">
+                        </div>
+                      </div>
+                      <div class="field has-text-left mt1">
+                        <label class="label">Komoditas Hewan</label>
+                        <input class="is-checkradio is-info inp_animal" id="sapi" type="checkbox" name="sapi" value="sapi" checked="checked">
+                        <label for="sapi" class="no-margin">Sapi</label>
+                        <input class="is-checkradio is-info inp_animal" id="kambing" type="checkbox" name="kambing" value="kambing">
+                        <label for="kambing" class="no-margin">Kambing</label>
+                        <input class="is-checkradio is-info inp_animal" id="domba" type="checkbox" value="domba" name="domba">
+                        <label for="domba" class="no-margin">Domba</label>
+                      </div>
+                      <div class="field has-text-left mt1">
+                        <label class="label">Jenis Program</label>
+                        <input class="is-checkradio is-info inp_program" id="kurban" type="checkbox" name="kurban" value="kurban" checked="checked">
+                        <label for="kurban" class="no-margin">Qurban</label>
+                        <input class="is-checkradio is-info inp_program" id="akikah" type="checkbox" name="akikah" value="akikah">
+                        <label for="akikah" class="no-margin">Aqiqah</label>
+                      </div>
+                      <div class="field mt2-25">
+                        <label class="label has-text-left">Alamat Peternakan</label>
+                        <div class="control">
+                          <textarea class="textarea inp_alamatp" placeholder="Alamat Peternakan"></textarea>
+                        </div>
+                      </div>
+                      <div class="field mt1">
+                        <label class="label has-text-left">Pin Alamat (opsional)</label>
+                        <div class="pin-point relative">
+                          <a href="#" class="button btn-map">Ubah Lokasi</a>
+                        </div>
+                      </div>
+                      <div class="field mt1">
+                        <label class="label has-text-left mb-75">Upload Foto Peternakan</label>
+                        <input type="file" class="inputfile inputfile-2" id="file" >
+                        <label for="file">
+                          <div class="pic-ternak pointer">
+                            <div>
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 67.5" width="50">
+                                <defs>
+                                  <style>
+                                    .pic-ternak {
+                                      fill: #a7a7a7;
+                                    }
+                                  </style>
+                                </defs>
+                                <g id="camera" transform="translate(0 -25.5)">
+                                  <g id="camera-alt" transform="translate(0 25.5)">
+                                    <circle id="Ellipse_71" data-name="Ellipse 71" class="pic-ternak" cx="12" cy="12" r="12" transform="translate(25.5 25.5)"/>
+                                    <path id="Path_31604" data-name="Path 31604" class="pic-ternak" d="M26.25,25.5,19.5,33H7.5A7.522,7.522,0,0,0,0,40.5v45A7.522,7.522,0,0,0,7.5,93h60A7.522,7.522,0,0,0,75,85.5v-45A7.522,7.522,0,0,0,67.5,33h-12l-6.75-7.5ZM37.5,81.75A18.75,18.75,0,1,1,56.25,63,18.568,18.568,0,0,1,37.5,81.75Z" transform="translate(0 -25.5)"/>
+                                  </g>
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </label>
+                        <div id="filename" class="mt0h">File format: jpg atau png</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="column is-3">
-              <div class="box-ternak shadow-box">
-                <div class="img-ternak">
-                  <img src="img/banner-2.jpg">
-                </div>
-                <div class="content desc-ternak">
-                  <div class="farm-name fw500">Berkah Abadi</div>
-                  <div class="small">Karawang Barat</div>
-                </div>
-                <div class="field mt1">
-                  <a href="#" class="button btn-akadQ" onclick="detailFarm()">Lihat Detail</a>
-                </div>
-              </div>
-            </div>
-            <div class="column is-3">
-              <div class="box-ternak shadow-box">
-                <div class="img-ternak">
-                  <img src="img/banner-3.jpg">
-                </div>
-                <div class="content desc-ternak">
-                  <div class="farm-name fw500">Pusat Kambing</div>
-                  <div class="small">Parung Panjang</div>
-                </div>
-                <div class="field mt1">
-                  <a href="#" class="button btn-akadQ" onclick="detailFarm()">Lihat Detail</a>
-                </div>
-              </div>
-            </div>
-            <div class="column is-3">
-              <div class="box-ternak shadow-box">
-                <div class="img-ternak">
-                  <img src="img/banner-1.jpg">
-                </div>
-                <div class="content desc-ternak">
-                  <div class="farm-name fw500">Bonsle Farm.UD</div>
-                  <div class="small">Depok, Jawa Barat</div>
-                </div>
-                <div class="field mt1">
-                  <a href="#" class="button btn-akadQ" onclick="detailFarm()">Lihat Detail</a>
-                </div>
-              </div>
-            </div>
-            <div class="column is-3">
-              <div class="box-ternak shadow-box add-farm">
-                <div class="tambah-ternak has-text-centered">
-                  <img src="img/tambah-ternak.png" width="100">
-                  <div>Tambah Peternakan</div>
-                </div>
-              </div>
+
+            <div class="field mt2">
+              <a href="mitra-pengaturan-peternakan.html" class="button btn-akadQ w-250 btn_submit">Simpan</a>
             </div>
           </div>
         </div>
@@ -238,28 +259,141 @@
     </div>
   </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+  <script src='http://maps.google.com/maps/api/js?sensor=false&libraries=places'></script>
+  <script src="js/locationpicker.jquery.js"></script>
   <script>
-    function detailFarm(){
-      $('.detail-farm').addClass('is-active');
+    $('#somecomponent').locationpicker();
+  
+    /* remove array function */
+    Array.prototype.remove = function() {
+      var what, a = arguments, L = a.length, ax;
+      while (L && this.length) {
+        what = a[--L];
+        while ((ax = this.indexOf(what)) !== -1) {
+          this.splice(ax, 1);
+        }
+      }
+      return this;
+    };
+
+    var name;
+    var age; /* NO REK */
+    var email;
+    var gender; /* NPWP */
+    var address;
+    var phone;
+    var requisitionType
+    var education /* ATASNAMA */
+    var ranchAddress
+    var ranchDescription /* NAMA PETERNAKAN */
+    var programType = [];
+    var ktp;
+    var image_1;
+    
+    function jadi_mitra(){
+       name = $(".inp_name").val();
+       email = $(".inp_email").val();
+       gender = $(".inp_npwp").val(); /* NPWP */
+       address = $(".inp_address").val();
+       phone = $(".inp_phone").val();
+       education = $(".inp_accnumb").val();/* NO REK */
+       age = $(".inp_accname").val(); /* ATASNAMA */
+       ranchAddress = $(".inp_alamatp").val();
+       ranchDescription  = $(".inp_namep").val(); /* NAMA PETERNAKAN */
+       ktp = $(".inp_idnumb").val();;
+       image_1="ok";
+       
+       $.ajax({
+          method: "POST",
+          url: "http://103.253.107.139/api/mitra/",
+          //type:"json",
+          data: {
+            name: name,
+            email: email,
+            gender : gender,
+            address : address,
+            phone : phone,
+            education : education,
+            requisitionType : requisitionType,
+            age : age,
+            ranchAddress : ranchAddress,
+            ranchDescription : ranchDescription,
+            programType : programType,
+            ktp : ktp,
+            image_1:image_1
+          },
+          success:function( response ) {
+          // alert("Form Berhasil Dikirim!")
+          window.location="pengajuan-mitra3.html";
+          },
+          error:function(er){
+            // alert(er.responseJSON.error_description);
+          }
+        }); 
+    }
+    
+    $(document).ready(function(){
+      $("input [type='text'], textarea").val("");
+      $(".btn_submit").click(jadi_mitra)
+    });
+    
+    $(".inp_program").click(function(){
+      if($(this).is(':checked')){
+        programType.push($(this).val());
+      }else{
+        programType.remove($(this).val())
+      }
+    })
+    
+    function pilih(param) {
+      if(param == "pribadi") {
+        $('.badanusaha').addClass('none').removeClass('block')
+        requisitionType = "PERSONAL"
+      } else {
+        $('.badanusaha').addClass('block').removeClass('none')
+        requisitionType = "CORPORATE"
+      }
     }
 
-    $('.del-detail').click(function(){
-      $('.detail-farm').removeClass('is-active');
+    $('.btn-map').click(function(){
+      $('.point-map').addClass('is-active')
+    })
+    $('.delete').click(function(){
+      $('.point-map').removeClass('is-active')
     })
 
-    $('.del-farm').click(function(){
-      $('.box-reason').addClass('is-active');
-      $('.detail-farm').removeClass('is-active');
-    })
 
-    $('.del-reason').click(function(){
-      $('.box-reason').removeClass('is-active');
-    })
+    document.getElementById("file").onchange = function(event) {
+      var file = document.getElementById("file");
+      if(file.files.length > 0)
+      {
 
-    $('.add-farm').click(function(){
-      window.location.href='mitra-tambah-peternakan.html';
-    })
+        var pathFile = file.value
+        var nameFile = file.files[0].name
+        var typeFile = file.files[0].type
+
+        if(typeFile != 'image/jpg' && typeFile != 'image/jpeg'){
+          alert('format file tidak didukung')
+          $('.pic-ternak svg').addClass('block').removeClass('none')
+          $('.pic-ternak').css('background-image', 'url()')
+          $('#filename').text("File format: jpg atau png");
+          return false
+        }
+
+        var reader = new FileReader();
+        reader.readAsDataURL(event.srcElement.files[0]);
+        var me = this;
+        reader.onload = function () {
+          var fileContent = reader.result;
+          console.log(reader);
+          $('#filename').text(file.files[0].name);
+          $('.pic-ternak svg').addClass('none');
+          $('.pic-ternak').css('background-image', 'url('+fileContent+')');
+          $('.pic-ternak').css('background-size', 'cover');
+        }
+      }
+    } 
+    
   </script>
 </body>
 </html>

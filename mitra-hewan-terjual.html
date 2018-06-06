@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>AkadBaiQ</title>
+  <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/swiper.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+</head>
+<body>
+  <div class="modal box-reason">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title is-size-6 fw600">Alasan kenapa dihapus?</p>
+        <button class="delete del-reason" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <ul class="reason">
+          <li>Sudah ada suntingan yang sama</li>
+          <li>Hewan Ternak sudah terjual</li>
+          <li>Hewan ternak Mati</li>
+          <li>Alasan Kenapa Dihapus</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div class="modal detail-hewan">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title is-size-6 fw600">Detail Hewan</p>
+        <button class="delete del-detail" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <div class="swiper-container swiper3">
+          <!-- banner slider -->
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/sapi-1-min.jpg"></div>
+            <div class="swiper-slide"><img src="img/sapi-2-min.jpg"></div>
+            <div class="swiper-slide"><img src="img/sapi-3-min.jpg"></div>
+          </div>
+          <!-- pagination -->
+         
+        </div>
+         <div class="swiper-pagination pag3"></div>
+        <div class="content desc-ternak mt1">
+          <div class="fw500">Sapi Bali Super</div>
+          <table class="table mt1 is-fullwidth is-striped">
+            <tbody>
+              <tr>
+                <td>Umur</td>
+                <td>: &nbsp;2</td>
+              </tr>
+              <tr>
+                <td>Panjang</td>
+                <td>: &nbsp;100cm</td>
+              </tr>
+              <tr>
+                <td>Tinggi</td>
+                <td>: &nbsp;50cm</td>
+              </tr>
+              <tr>
+                <td>Lingkar Dada</td>
+                <td>: &nbsp;160cm</td>
+              </tr>
+              <tr>
+                <td>Berat</td>
+                <td>: &nbsp;90kg</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="last-update has-text-right mt2">
+            Terakhir update : 5 Juni 2018 20:145 WIB
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="columns">
+      <div class="column is-narrow pb0">
+        <div class="left-menu is-back-grey">
+          <div class="brand-icon has-text-centered">
+            <img src="img/logo.png" alt="Logo" width="70%">
+          </div>
+          <aside class="menu">
+            <ul class="menu-list">
+              <li><a href="mitra-dashboard.html">Dashboard</a></li>
+              <li><a href="mitra-pengaturan-peternakan.html">Pengaturan Peternakan</a></li>
+              <li class="is-active menu-add-hewan">
+                <a class="align-items relative" onclick="showMenu()">
+                  Pengaturan Hewan
+                  <span>
+                    <svg class="align-items" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" fill="#fff"/></svg>
+                  </span>
+                </a>
+                <ul class="sub-menus none">
+                  <li><a href="mitra-tambah-hewan.html">Tambah Ternak</a></li>
+                  <li><a href="mitra-hewan-dijual.html">Hewan Dijual</a></li>
+                  <li><a href="mitra-hewan-terjual.html">Sudah Terjual</a></li>
+                </ul>
+              </li>
+              <li><a href="mitra-transaksi-anda.html">Transaksi Anda</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+      <div class="column">
+        <div class="right-menu">
+          <nav class="level top-menu">
+            <div class="level-left">
+            </div>
+            <div class="level-right">
+              <div class="level-item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.244 35" width="20">
+                  <defs>
+                    <style>
+                      .mail {
+                        fill: #707070;
+                      }
+                    </style>
+                  </defs>
+                  <g id="mail-open-file" transform="translate(-2.673 -1.07)">
+                    <path id="Path_31829" data-name="Path 31829" class="mail" d="M33.8,15.454,20.209,1.864a2.705,2.705,0,0,0-3.828,0L13.418,4.827H8.923V9.32l-6.25,6.248v20.5H33.916v-20.5l-.116-.116Zm-1.294.475-4.84,4.84V11.09l4.84,4.84ZM17.263,2.746a1.493,1.493,0,0,1,2.062,0L21.4,4.825h-6.22l2.079-2.079Zm5.389,3.329L26.416,9.84V22.018l-2.894,2.894L20.206,21.6a2.705,2.705,0,0,0-3.828,0L13.013,24.96,10.17,22.116V6.076H22.651ZM4.674,15.334l4.248-4.248v9.779l-4.89-4.89.642-.642Zm-.752,3.3v-1l8.208,8.208-.093.094h0L3.921,34.049V18.637Zm1,16.182.672-.672h0L17.263,22.478a1.493,1.493,0,0,1,2.062,0L31.668,34.819H4.919Zm27.747-17V34.05L24.407,25.8l8.259-8.259v.284Z" transform="translate(0)"/>
+                    <path id="Path_31830" data-name="Path 31830" class="mail" d="M12.268,8.539h8.749V9.788H12.268Z" transform="translate(1.651 1.285)"/>
+                    <path id="Path_31831" data-name="Path 31831" class="mail" d="M12.268,14.937h8.749v1.249H12.268Z" transform="translate(1.651 2.386)"/>
+                    <path id="Path_31832" data-name="Path 31832" class="mail" d="M12.268,11.738h6.248v1.249H12.268Z" transform="translate(1.651 1.836)"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="level-item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.45 36.7" width="20">
+                  <defs>
+                    <style>
+                      .notif {
+                        fill: none;
+                        stroke: #707070;
+                        stroke-width: 1.7px;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Group_33759" data-name="Group 33759" transform="translate(-1630.15 -90.15)">
+                    <g id="notifications-button" transform="translate(1592.75 91)">
+                      <g id="notifications">
+                        <path id="Path_75" data-name="Path 75" class="notif" d="M53.125,35a3.51,3.51,0,0,0,3.5-3.5h-7A3.51,3.51,0,0,0,53.125,35ZM64.5,24.5V14.875A11.261,11.261,0,0,0,55.75,3.85V2.625a2.625,2.625,0,1,0-5.25,0V3.85a11.261,11.261,0,0,0-8.75,11.025V24.5L38.25,28v1.75H68V28Z"/>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <div class="level-item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" width="20">
+                  <defs>
+                    <style>
+                      .akun {
+                        fill: #5f6061;
+                      }
+                    </style>
+                  </defs>
+                  <path id="user_1_" data-name="user (1)" class="akun" d="M35,17.5A17.5,17.5,0,1,0,5.68,30.391l-.017.015.568.479c.037.031.077.057.114.087.3.25.614.487.932.717.1.074.206.149.311.221q.51.351,1.045.667c.078.046.156.09.234.135.39.222.788.431,1.2.624l.09.041a17.342,17.342,0,0,0,4.232,1.34l.117.021c.461.08.927.143,1.4.186l.172.013c.47.039.944.064,1.425.064s.947-.025,1.414-.062l.178-.013q.7-.064,1.386-.183l.119-.022a17.342,17.342,0,0,0,4.173-1.308l.146-.066q.589-.277,1.152-.6.14-.079.279-.161c.342-.2.679-.412,1.006-.636.118-.08.233-.165.349-.249.279-.2.554-.409.82-.626.059-.048.123-.089.181-.138l.582-.486-.017-.015A17.455,17.455,0,0,0,35,17.5Zm-33.727,0A16.227,16.227,0,1,1,28.262,29.631a4.769,4.769,0,0,0-.568-.342L22.305,26.6a1.411,1.411,0,0,1-.784-1.268V23.446c.125-.154.256-.328.393-.52a12.968,12.968,0,0,0,1.665-3.26,2.31,2.31,0,0,0,1.327-2.093V15.317a2.315,2.315,0,0,0-.564-1.508v-2.97a5.133,5.133,0,0,0-1.2-3.732C21.97,5.769,20.072,5.091,17.5,5.091s-4.47.678-5.643,2.016a5.133,5.133,0,0,0-1.2,3.732v2.97a2.319,2.319,0,0,0-.564,1.508v2.256a2.315,2.315,0,0,0,.853,1.8,11.957,11.957,0,0,0,1.968,4.066v1.842a1.42,1.42,0,0,1-.739,1.246L7.144,29.265a4.6,4.6,0,0,0-.479.3A16.188,16.188,0,0,1,1.273,17.5ZM27.019,30.629q-.334.242-.679.468c-.106.069-.211.137-.318.2-.3.186-.606.363-.918.528-.069.036-.138.071-.207.106a16.215,16.215,0,0,1-2.22.939L22.6,32.9q-.6.2-1.212.351h0c-.412.1-.83.186-1.25.256l-.034.006c-.4.064-.794.111-1.193.146-.071.006-.141.011-.213.016-.4.03-.792.049-1.191.049s-.806-.02-1.206-.05c-.069-.005-.139-.01-.207-.016-.4-.036-.805-.083-1.2-.148l-.053-.01a16.167,16.167,0,0,1-2.475-.618l-.075-.025q-.6-.2-1.185-.454l-.008,0c-.368-.158-.729-.334-1.085-.519-.046-.024-.094-.047-.139-.072-.325-.174-.643-.361-.957-.557q-.139-.088-.277-.178c-.289-.189-.574-.386-.851-.594l-.085-.066.061-.034,5.032-2.745a2.691,2.691,0,0,0,1.4-2.363V22.982l-.146-.177a10.625,10.625,0,0,1-1.91-3.956l-.058-.252-.217-.141a1.055,1.055,0,0,1-.489-.886V15.315a1.039,1.039,0,0,1,.354-.778l.21-.19V10.8l-.006-.083a3.833,3.833,0,0,1,.888-2.775c.92-1.049,2.5-1.581,4.686-1.581s3.752.528,4.675,1.569a3.9,3.9,0,0,1,.9,2.788l-.006,3.628.21.19a1.04,1.04,0,0,1,.354.778v2.256a1.063,1.063,0,0,1-.752,1l-.316.1-.1.315a11.773,11.773,0,0,1-1.588,3.2c-.167.235-.329.444-.468.6l-.158.18v2.354a2.676,2.676,0,0,0,1.488,2.407l5.388,2.694.1.053C27.158,30.532,27.088,30.58,27.019,30.629Z"/>
+                </svg>
+                <div class="accoount-name ml0h">
+                  Khariz Kharaij
+                </div>
+              </div>
+            </div>
+          </nav>
+          <!-- content -->
+          <div class="field">
+            <label class="label"></label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option value="all">Semua Hewan</option>
+                  <option value="sapi">Sapi</option>
+                  <option value="kambing">Kambing</option>
+                  <option value="domba">Domba</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="columns is-multiline mt2">
+            <div class="column is-4">
+              <div class="box-hewan relative">
+                <div class="img-hewan">
+                  <img src="img/sapi.jpg">
+                </div>
+                <div class="columns mb0">
+                  <div class="column">
+                    <div class="content desc-ternak">
+                      <div class="fw500">Sapi Bali Super</div>
+                      <div class="small">Depok, Jawa Barat</div>
+                    </div>
+                  </div>
+                  <div class="column is-3">
+                    <div class="find-detail" onclick="findDetail()">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" fill="#fff"/></svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="transaksi">
+                  Transaksi :<span class="jenis-transaksi is-text-blue">Tunai</span>
+                </div>
+                <div class="box-price mt0h">
+                  <strike class="normal-price">Rp 45.000.000</strike>
+                  <span class="disc-price">Rp 35.000.000</span>
+                </div>
+                <div class="field mt2">
+                  <a href="mitra-hewan-dijual.html" class="button btn-akadQ is-fullwidth disabled">Sudah Terjual</a>
+                </div>
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="box-hewan relative">
+                <div class="img-hewan">
+                  <img src="img/sapi.jpg">
+                </div>
+                <div class="columns mb0">
+                  <div class="column">
+                    <div class="content desc-ternak">
+                      <div class="fw500">Sapi Bali Super</div>
+                      <div class="small">Depok, Jawa Barat</div>
+                    </div>
+                  </div>
+                  <div class="column is-3">
+                    <div class="find-detail" onclick="findDetail()">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" fill="#fff"/></svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="transaksi">
+                  Transaksi :<span class="jenis-transaksi is-text-blue">Tunai</span>
+                </div>
+                <div class="box-price mt0h">
+                  <strike class="normal-price">Rp 45.000.000</strike>
+                  <span class="disc-price">Rp 35.000.000</span>
+                </div>
+                <div class="field mt2">
+                  <a href="mitra-hewan-dijual.html" class="button btn-akadQ is-fullwidth disabled">Sudah Terjual</a>
+                </div>
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="box-hewan relative">
+                <div class="img-hewan">
+                  <img src="img/sapi.jpg">
+                </div>
+                <div class="columns mb0">
+                  <div class="column">
+                    <div class="content desc-ternak">
+                      <div class="fw500">Sapi Bali Super</div>
+                      <div class="small">Depok, Jawa Barat</div>
+                    </div>
+                  </div>
+                  <div class="column is-3">
+                    <div class="find-detail" onclick="findDetail()">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" fill="#fff"/></svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="transaksi">
+                  Transaksi :<span class="jenis-transaksi is-text-blue">Tunai</span>
+                </div>
+                <div class="box-price mt0h">
+                  <strike class="normal-price">Rp 45.000.000</strike>
+                  <span class="disc-price">Rp 35.000.000</span>
+                </div>
+                <div class="field mt2">
+                  <a href="mitra-hewan-dijual.html" class="button btn-akadQ is-fullwidth disabled">Sudah Terjual</a>
+                </div>
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="box-hewan relative">
+                <div class="img-hewan">
+                  <img src="img/sapi.jpg">
+                </div>
+                <div class="columns mb0">
+                  <div class="column">
+                    <div class="content desc-ternak">
+                      <div class="fw500">Sapi Bali Super</div>
+                      <div class="small">Depok, Jawa Barat</div>
+                    </div>
+                  </div>
+                  <div class="column is-3">
+                    <div class="find-detail" onclick="findDetail()">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" fill="#fff"/></svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="transaksi">
+                  Transaksi :<span class="jenis-transaksi is-text-blue">Tunai</span>
+                </div>
+                <div class="box-price mt0h">
+                  <strike class="normal-price">Rp 45.000.000</strike>
+                  <span class="disc-price">Rp 35.000.000</span>
+                </div>
+                <div class="field mt2">
+                  <a href="mitra-hewan-dijual.html" class="button btn-akadQ is-fullwidth disabled">Sudah Terjual</a>
+                </div>
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="box-hewan relative">
+                <div class="img-hewan">
+                  <img src="img/sapi.jpg">
+                </div>
+                <div class="columns mb0">
+                  <div class="column">
+                    <div class="content desc-ternak">
+                      <div class="fw500">Sapi Bali Super</div>
+                      <div class="small">Depok, Jawa Barat</div>
+                    </div>
+                  </div>
+                  <div class="column is-3">
+                    <div class="find-detail" onclick="findDetail()">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" fill="#fff"/></svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="transaksi">
+                  Transaksi :<span class="jenis-transaksi is-text-blue">Tunai</span>
+                </div>
+                <div class="box-price mt0h">
+                  <strike class="normal-price">Rp 45.000.000</strike>
+                  <span class="disc-price">Rp 35.000.000</span>
+                </div>
+                <div class="field mt2">
+                  <a href="mitra-hewan-dijual.html" class="button btn-akadQ is-fullwidth disabled">Sudah Terjual</a>
+                </div>
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="box-hewan relative">
+                <div class="img-hewan">
+                  <img src="img/sapi.jpg">
+                </div>
+                <div class="columns mb0">
+                  <div class="column">
+                    <div class="content desc-ternak">
+                      <div class="fw500">Sapi Bali Super</div>
+                      <div class="small">Depok, Jawa Barat</div>
+                    </div>
+                  </div>
+                  <div class="column is-3">
+                    <div class="find-detail" onclick="findDetail()">
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" fill="#fff"/></svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="transaksi">
+                  Transaksi :<span class="jenis-transaksi is-text-blue">Tunai</span>
+                </div>
+                <div class="box-price mt0h">
+                  <strike class="normal-price">Rp 45.000.000</strike>
+                  <span class="disc-price">Rp 35.000.000</span>
+                </div>
+                <div class="field mt2">
+                  <a href="mitra-hewan-dijual.html" class="button btn-akadQ is-fullwidth disabled">Sudah Terjual</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script>
+      var swiper3 = new Swiper('.swiper3', {
+      slidesPerView: 1,
+      loop: true,
+      autoplay: true,
+      pagination: {
+        el: '.swiper-pagination.pag3',
+        clickable: true,
+      },
+    });
+    function findDetail(){
+      $('.detail-hewan').addClass('is-active');
+    }
+
+    $('.del-detail').click(function(){
+      $('.detail-hewan').removeClass('is-active');
+    })
+
+    $('.del-farm').click(function(){
+      $('.box-reason').addClass('is-active');
+      $('.detail-farm').removeClass('is-active');
+    })
+
+    $('.del-reason').click(function(){
+      $('.box-reason').removeClass('is-active');
+    })
+
+    $('.edit-farm').click(function(){
+      window.location.href='mitra-tambah-hewan.html';
+    })
+
+    function showMenu(){
+      $('.sub-menus').toggle()
+    }
+  </script>
+</body>
+</html>

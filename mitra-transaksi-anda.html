@@ -99,7 +99,7 @@
           <aside class="menu">
             <ul class="menu-list">
               <li><a href="mitra-dashboard.html">Dashboard</a></li>
-              <li class="is-active"><a href="mitra-pengaturan-peternakan.html">Pengaturan Peternakan</a></li>
+              <li><a href="mitra-pengaturan-peternakan.html">Pengaturan Peternakan</a></li>
               <li class="menu-add-hewan">
                 <a class="align-items relative" onclick="showMenu()">
                   Pengaturan Hewan
@@ -113,7 +113,7 @@
                   <li><a href="mitra-hewan-terjual.html">Sudah Terjual</a></li>
                 </ul>
               </li>
-              <li><a href="mitra-transaksi-anda.html">Transaksi Anda</a></li>
+              <li class="is-active"><a href="mitra-transaksi-anda.html">Transaksi Anda</a></li>
             </ul>
           </aside>
         </div>
@@ -179,68 +179,111 @@
             </div>
           </nav>
           <!-- content -->
-          <div class="columns is-multiline">
-            <div class="column is-3">
-              <div class="box-ternak shadow-box">
-                <div class="img-ternak">
-                  <img src="img/banner-1.jpg">
+          <div class="field">
+            <label class="label"></label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option value="all">Semua Transaksi</option>
+                  <option value="sapi">Meunggu Persetujuan</option>
+                  <option value="kambing">Sudah Bayar</option>
+                  <option value="domba">Cicilan</option>
+                  <option value="domba">Dibatalkan</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          
+          <div class="box-transaksi shadow-box">
+            <div class="info-transaksi">
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item tgl-transaksi">
+                    05 Juni 2018
+                  </div>
                 </div>
-                <div class="content desc-ternak">
-                  <div class="farm-name fw500">Bonsle Farm.UD</div>
-                  <div class="small">Depok, Jawa Barat</div>
-                </div>
-                <div class="field mt1">
-                  <a href="#" class="button btn-akadQ" onclick="detailFarm()">Lihat Detail</a>
+                <div class="level-right">
+                  <div class="level-item invoice">
+                    INV/20180605/XVIII/VI/168854789
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="column is-3">
-              <div class="box-ternak shadow-box">
-                <div class="img-ternak">
-                  <img src="img/banner-2.jpg">
+            <div class="columns align-items detail-transaksi mb0 pb0">
+              <div class="column">
+                <div class="columns align-items">
+                  <div class="column">
+                    <div class="img-transaksi">
+                      <img src="img/sapi-1-min.jpg">
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="content">
+                      <div class="fw500">Sapi Bali Super</div>
+                      <div class="small">Rp. 30.000.000</div>
+                    </div>
+                  </div>
                 </div>
-                <div class="content desc-ternak">
-                  <div class="farm-name fw500">Berkah Abadi</div>
-                  <div class="small">Karawang Barat</div>
+              </div>
+              <div class="column is-2">
+                <div class="content">
+                  <div class="fw500">Bayar</div>
+                  <div class="small">Tunai</div>
                 </div>
-                <div class="field mt1">
-                  <a href="#" class="button btn-akadQ" onclick="detailFarm()">Lihat Detail</a>
+              </div>
+              <div class="column is-2">
+                <div class="content">
+                  <div class="fw500">Nama Pembeli</div>
+                  <div class="small">Petter Parker</div>
+                </div>
+              </div>
+              <div class="column is-2">
+                <div class="content">
+                  <div class="fw500">Proses</div>
+                  <div class="small is-text-blue">Sudah Bayar</div>
+                </div>
+              </div>
+              <div class="column is-2">
+                <div class="field">
+                  <a href="mitra-hewan-dijual.html" class="button is-fullwidth btn-akadQ">Detail Pembelian</a>
                 </div>
               </div>
             </div>
-            <div class="column is-3">
-              <div class="box-ternak shadow-box">
-                <div class="img-ternak">
-                  <img src="img/banner-3.jpg">
+            <hr>
+            <div class="more-detail">
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <table class="table">
+                      <tr>
+                        <td>
+                          Pengiriman
+                        </td>
+                        <td>
+                          Rp 700.000
+                        </td>
+                      </tr>
+                      <tr class="fw600">
+                        <td>
+                          Total Harga
+                        </td>
+                        <td>
+                          Rp 30.700.000
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
                 </div>
-                <div class="content desc-ternak">
-                  <div class="farm-name fw500">Pusat Kambing</div>
-                  <div class="small">Parung Panjang</div>
-                </div>
-                <div class="field mt1">
-                  <a href="#" class="button btn-akadQ" onclick="detailFarm()">Lihat Detail</a>
-                </div>
-              </div>
-            </div>
-            <div class="column is-3">
-              <div class="box-ternak shadow-box">
-                <div class="img-ternak">
-                  <img src="img/banner-1.jpg">
-                </div>
-                <div class="content desc-ternak">
-                  <div class="farm-name fw500">Bonsle Farm.UD</div>
-                  <div class="small">Depok, Jawa Barat</div>
-                </div>
-                <div class="field mt1">
-                  <a href="#" class="button btn-akadQ" onclick="detailFarm()">Lihat Detail</a>
-                </div>
-              </div>
-            </div>
-            <div class="column is-3">
-              <div class="box-ternak shadow-box add-farm">
-                <div class="tambah-ternak has-text-centered">
-                  <img src="img/tambah-ternak.png" width="100">
-                  <div>Tambah Peternakan</div>
+                <div class="level-right">
+                  <div class="level-item">
+                    Konfirmasi Pengiriman
+                  </div>
+                  <div class="level-item">
+                    Batalkan Pesanan
+                  </div>
+                  <div class="level-item">
+                    Terima Pesanan
+                  </div>
                 </div>
               </div>
             </div>
@@ -277,7 +320,13 @@
     })
 
     function showMenu(){
-      $('.sub-menus').toggle()
+      if($('.sub-menus').hasClass('none')) {
+        $('.sub-menus').addClass('block').removeClass('none');
+        $('.menu-add-hewan svg').css('transform', 'rotate(90deg)')
+      } else {
+         $('.sub-menus').addClass('none').removeClass('block')
+         $('.menu-add-hewan svg').css('transform', 'rotate(0deg)')
+      }
     }
   </script>
 </body>
