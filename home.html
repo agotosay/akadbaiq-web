@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/swiper.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 </head>
 <body>
@@ -813,25 +814,9 @@
     function selectgrade(id){
       $div = $('#menugrade'+id).addClass('is-active');
       $('.menu-grade').not($div).removeClass('is-active');
+      $diva = $('#tablegrade'+id).addClass('block').removeClass('none');
+      $('.grade').not($diva).removeClass('block').addClass('none');
     }
-    $('#menugrade1').click(function(){
-      $('#tablegrade1').addClass('block')
-      $('#tablegrade1').removeClass('none')
-      $('#tablegrade2').addClass('none')
-      $('#tablegrade3').addClass('none')
-    })
-    $('#menugrade2').click(function(){
-      $('#tablegrade2').addClass('block')
-      $('#tablegrade2').removeClass('none')
-      $('#tablegrade1').addClass('none')
-      $('#tablegrade3').addClass('none')
-    })
-    $('#menugrade3').click(function(){
-      $('#tablegrade3').addClass('block')
-      $('#tablegrade3').removeClass('none')
-      $('#tablegrade1').addClass('none')
-      $('#tablegrade2').addClass('none')
-    })
 
     // if(localStorage.aq_mitra_status=="ok"){
     //   $(".menu-ternak").html('<div class="content mb0h">'+

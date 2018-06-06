@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/extension.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 </head>
 <body>
@@ -46,139 +47,262 @@
                   <div class="columns">
                     <div class="column">
                       <div class="field mt1">
-                        <label class="label has-text-left">Jenis Komoditas</label>
+                        <label class="label has-text-left">Umur</label>
                         <div class="control">
-                          <div class="select is-fullwidth">
-                            <select>
-                              <optgroup label="Sapi">
-                                <option value="Sapi Jawa">Sapi Jawa</option>
-                                <option value="Sapi Limosin">Sapi Limosin</option>
-                              </optgroup>
-                              <optgroup label="Kambing">
-                                <option value="Kambing Etawa">Kambing Etawa</option>
-                                <option value="Kambing Kacang">Kambing Kacang</option>
-                              </optgroup>
-                              <optgroup label="Domba">
-                                <option value="Kambing Etawa">Domba Garut</option>
-                                <option value="Kambing Kacang">Domba Batur</option>
-                              </optgroup>
-                            </select>
-                          </div>
+                          <input class="input inp_umur" type="number" min="1" max="12" placeholder="contoh: 1">
+                          <div class="small has-text-left">dalam satuan bulan, max 12 bulan</div>
                         </div>
                       </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Berat</label>
-                        <div class="control">
-                          <input class="input" type="number" placeholder="contoh: 103kg">
-                        </div>
+                    </div>
+                    <div class="column">
+                      <div class="field has-text-left mt1">
+                        <label class="label mb1">Pilih Jenis Transaksi</label>
+                        <input class="is-checkradio is-info" id="tabungan" type="radio" name="jenidtransaksi" checked="checked">
+                        <label for="tabungan" class="ml0">Tabungan</label>
+                        <input class="is-checkradio is-info" id="tunai" type="radio" name="jenidtransaksi">
+                        <label for="tunai">Tunai</label>
                       </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Tinggi</label>
-                        <div class="control">
-                          <input class="input" type="email" placeholder="contoh: 120cm">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Grade</label>
-                        <div class="control">
-                          <input class="input" type="email" readonly value="Grade A">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Upload Foto Hewan</label>
-                        <div class="columns">
-                          <div class="column">
-                            <div class="pic-hewan">
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 67.5" width="30">
-                                <defs>
-                                  <style>
-                                    .pic-ternak {
-                                      fill: #a7a7a7;
-                                    }
-                                  </style>
-                                </defs>
-                                <g id="camera" transform="translate(0 -25.5)">
-                                  <g id="camera-alt" transform="translate(0 25.5)">
-                                    <circle id="Ellipse_71" data-name="Ellipse 71" class="pic-ternak" cx="12" cy="12" r="12" transform="translate(25.5 25.5)"/>
-                                    <path id="Path_31604" data-name="Path 31604" class="pic-ternak" d="M26.25,25.5,19.5,33H7.5A7.522,7.522,0,0,0,0,40.5v45A7.522,7.522,0,0,0,7.5,93h60A7.522,7.522,0,0,0,75,85.5v-45A7.522,7.522,0,0,0,67.5,33h-12l-6.75-7.5ZM37.5,81.75A18.75,18.75,0,1,1,56.25,63,18.568,18.568,0,0,1,37.5,81.75Z" transform="translate(0 -25.5)"/>
-                                  </g>
-                                </g>
-                              </svg>
+                    </div>
+                  </div>
+                  <div class="field1 none">
+                    <div class="columns">
+                      <div class="column">
+                        <div class="field mt1">
+                          <label class="label has-text-left">Jenis Komoditas</label>
+                          <div class="control">
+                            <div class="select is-fullwidth">
+                              <select>
+                                <optgroup label="Sapi">
+                                  <option value="Sapi Jawa">Sapi Jawa</option>
+                                  <option value="Sapi Limosin">Sapi Limosin</option>
+                                </optgroup>
+                                <optgroup label="Kambing">
+                                  <option value="Kambing Etawa">Kambing Etawa</option>
+                                  <option value="Kambing Kacang">Kambing Kacang</option>
+                                </optgroup>
+                                <optgroup label="Domba">
+                                  <option value="Kambing Etawa">Domba Garut</option>
+                                  <option value="Kambing Kacang">Domba Batur</option>
+                                </optgroup>
+                              </select>
                             </div>
                           </div>
-                          <div class="column">
-                            <div class="pic-hewan">
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 67.5" width="30">
-                                <defs>
-                                  <style>
-                                    .pic-ternak {
-                                      fill: #a7a7a7;
-                                    }
-                                  </style>
-                                </defs>
-                                <g id="camera" transform="translate(0 -25.5)">
-                                  <g id="camera-alt" transform="translate(0 25.5)">
-                                    <circle id="Ellipse_71" data-name="Ellipse 71" class="pic-ternak" cx="12" cy="12" r="12" transform="translate(25.5 25.5)"/>
-                                    <path id="Path_31604" data-name="Path 31604" class="pic-ternak" d="M26.25,25.5,19.5,33H7.5A7.522,7.522,0,0,0,0,40.5v45A7.522,7.522,0,0,0,7.5,93h60A7.522,7.522,0,0,0,75,85.5v-45A7.522,7.522,0,0,0,67.5,33h-12l-6.75-7.5ZM37.5,81.75A18.75,18.75,0,1,1,56.25,63,18.568,18.568,0,0,1,37.5,81.75Z" transform="translate(0 -25.5)"/>
-                                  </g>
-                                </g>
-                              </svg>
-                            </div>
-                          </div>
-                          <div class="column">
-                            <div class="pic-hewan">
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 88" width="30">
-                                <defs>
-                                  <style>
-                                    .plus {
-                                      fill: #a7a7a7;
-                                      font-size: 67px;
-                                      font-family: Roboto-Regular, Roboto;
-                                    }
-                                  </style>
-                                </defs>
-                                <text id="_" data-name="+" class="plus" transform="translate(0 70)"><tspan x="0" y="0">+</tspan></text>
-                              </svg>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="field mt1">
+                          <label class="label has-text-left">Pilih Peternakan</label>
+                          <div class="control">
+                            <div class="select is-fullwidth">
+                              <select>
+                                <option value="UD Sumber Jaya">UD Sumber Jaya</option>
+                              </select>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="column">
-                      <div class="field mt1">
-                        <label class="label has-text-left">Pilih Peternakan</label>
-                        <div class="control">
-                          <div class="select is-fullwidth">
-                            <select>
-                              <option value="UD Sumber Jaya">UD Sumber Jaya</option>
-                            </select>
+                  </div>
+                  <div class="field2 none">
+                    <div class="columns">
+                      <div class="column">
+                        <div class="field has-text-left mt1">
+                          <label class="label">Hitung Berat</label>
+                          <input class="is-checkradio is-info cekberat" id="timbangan" type="radio" name="cekberat" checked="checked" onclick="timbangan()">
+                          <label for="timbangan" class="ml0">Hasil Timbangan</label>
+                          <input class="is-checkradio is-info cekberat" id="manual" type="radio" name="cekberat" onclick="manual()">
+                          <label for="manual">Hitung Manual</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field3 none">
+                    <div class="columns">
+                      <div class="column is-6">
+                        <div class="field mt1">
+                          <label class="label has-text-left">Berat saat ini</label>
+                          <div class="control">
+                            <input class="input weight" type="number" placeholder="contoh: 103kg">
                           </div>
                         </div>
                       </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Panjang</label>
-                        <div class="control">
-                          <input class="input" type="email" placeholder="contoh: 20cm">
+                    </div>
+                  </div>
+                  <div class="field4 none">
+                    <div class="columns is-multiline">
+                      <div class="column is-6"> 
+                        <div class="field mt1">
+                          <label class="label has-text-left">Tinggi saat ini</label>
+                          <div class="control">
+                            <input class="input calc-weight" id="height" type="number" placeholder="contoh: 120cm">
+                          </div>
                         </div>
                       </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Lingkar Dada</label>
-                        <div class="control">
-                          <input class="input" type="email" placeholder="contoh: 200cm">
+                      <div class="column is-6">
+                        <div class="field mt1">
+                          <label class="label has-text-left">Panjang saat ini</label>
+                          <div class="control">
+                            <input class="input calc-weight" id="long" type="number" placeholder="contoh: 20cm">
+                          </div>
                         </div>
                       </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Harga</label>
-                        <div class="control">
-                          <input class="input" type="email" readonly value="Rp 25.000.000 ~ Rp 30.000.000">
+                      <div class="column is-6">
+                        <div class="field mt1">
+                          <label class="label has-text-left">Lingkar dada saat ini</label>
+                          <div class="control">
+                            <input class="input calc-weight" id="chest" type="number" placeholder="contoh: 200cm">
+                          </div>
                         </div>
                       </div>
-                      <div class="field has-text-left mt1">
-                        <label class="label">Kelamin</label>
-                        <input class="is-checkradio is-info" id="pejantan" type="radio" name="radio" checked="checked">
-                        <label for="pejantan" class="ml0">Pejantan</label>
-                        <input class="is-checkradio is-info" id="betina" type="radio" name="radio">
-                        <label for="betina">Betina</label>
+                      <div class="column is-6">
+                        <div class="field mt1">
+                          <label class="label has-text-left">Estimasi Berat</label>
+                          <div class="control no-select">
+                            <input class="input" type="number" readonly placeholder="Estimasi Berat">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field5 none">
+                    <div class="columns is-multiline">
+                      <div class="column is-6">
+                        <div class="field mt1">
+                          <label class="label has-text-left">Jenis Pakan</label>
+                          <div class="control">
+                            <div class="select is-fullwidth">
+                              <select>
+                                <option>Rumput Gajah</option>
+                                <option>Daging Cincang</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="column is-6">
+                        <div class="field mt1">
+                          <label class="label has-text-left">Harga</label>
+                          <div class="control no-select">
+                            <input class="input" type="email" readonly value="Rp 25.000.000 ~ Rp 30.000.000">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="column is-12">
+                        <div class="field mt1">
+                          <label class="label has-text-left mb-1h">Upload Foto Hewan</label>
+                          <div class="columns">
+                            <div class="column">
+                              <input type="file" class="inputfile inputfile-2" id="file" >
+                              <label for="file">
+                                <div class="pic-hewan">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 67.5" width="30">
+                                    <defs>
+                                      <style>
+                                        .pic-ternak {
+                                          fill: #a7a7a7;
+                                        }
+                                      </style>
+                                    </defs>
+                                    <g id="camera" transform="translate(0 -25.5)">
+                                      <g id="camera-alt" transform="translate(0 25.5)">
+                                        <circle id="Ellipse_71" data-name="Ellipse 71" class="pic-ternak" cx="12" cy="12" r="12" transform="translate(25.5 25.5)"/>
+                                        <path id="Path_31604" data-name="Path 31604" class="pic-ternak" d="M26.25,25.5,19.5,33H7.5A7.522,7.522,0,0,0,0,40.5v45A7.522,7.522,0,0,0,7.5,93h60A7.522,7.522,0,0,0,75,85.5v-45A7.522,7.522,0,0,0,67.5,33h-12l-6.75-7.5ZM37.5,81.75A18.75,18.75,0,1,1,56.25,63,18.568,18.568,0,0,1,37.5,81.75Z" transform="translate(0 -25.5)"/>
+                                      </g>
+                                    </g>
+                                  </svg>
+                                </div>
+                              </label>
+                            </div>
+                            <div class="column">
+                              <input type="file" class="inputfile inputfile-2" id="file" >
+                              <label for="file">
+                                <div class="pic-hewan">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 67.5" width="30">
+                                    <defs>
+                                      <style>
+                                        .pic-ternak {
+                                          fill: #a7a7a7;
+                                        }
+                                      </style>
+                                    </defs>
+                                    <g id="camera" transform="translate(0 -25.5)">
+                                      <g id="camera-alt" transform="translate(0 25.5)">
+                                        <circle id="Ellipse_71" data-name="Ellipse 71" class="pic-ternak" cx="12" cy="12" r="12" transform="translate(25.5 25.5)"/>
+                                        <path id="Path_31604" data-name="Path 31604" class="pic-ternak" d="M26.25,25.5,19.5,33H7.5A7.522,7.522,0,0,0,0,40.5v45A7.522,7.522,0,0,0,7.5,93h60A7.522,7.522,0,0,0,75,85.5v-45A7.522,7.522,0,0,0,67.5,33h-12l-6.75-7.5ZM37.5,81.75A18.75,18.75,0,1,1,56.25,63,18.568,18.568,0,0,1,37.5,81.75Z" transform="translate(0 -25.5)"/>
+                                      </g>
+                                    </g>
+                                  </svg>
+                                </div>
+                              </label>
+                            </div>
+                            <div class="column">
+                              <input type="file" class="inputfile inputfile-2" id="file" >
+                              <label for="file">
+                                <div class="pic-hewan">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 67.5" width="30">
+                                    <defs>
+                                      <style>
+                                        .pic-ternak {
+                                          fill: #a7a7a7;
+                                        }
+                                      </style>
+                                    </defs>
+                                    <g id="camera" transform="translate(0 -25.5)">
+                                      <g id="camera-alt" transform="translate(0 25.5)">
+                                        <circle id="Ellipse_71" data-name="Ellipse 71" class="pic-ternak" cx="12" cy="12" r="12" transform="translate(25.5 25.5)"/>
+                                        <path id="Path_31604" data-name="Path 31604" class="pic-ternak" d="M26.25,25.5,19.5,33H7.5A7.522,7.522,0,0,0,0,40.5v45A7.522,7.522,0,0,0,7.5,93h60A7.522,7.522,0,0,0,75,85.5v-45A7.522,7.522,0,0,0,67.5,33h-12l-6.75-7.5ZM37.5,81.75A18.75,18.75,0,1,1,56.25,63,18.568,18.568,0,0,1,37.5,81.75Z" transform="translate(0 -25.5)"/>
+                                      </g>
+                                    </g>
+                                  </svg>
+                                </div>
+                              </label>
+                            </div>
+                            <div class="column">
+                              <input type="file" class="inputfile inputfile-2" id="file" >
+                              <label for="file">
+                                <div class="pic-hewan">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 67.5" width="30">
+                                    <defs>
+                                      <style>
+                                        .pic-ternak {
+                                          fill: #a7a7a7;
+                                        }
+                                      </style>
+                                    </defs>
+                                    <g id="camera" transform="translate(0 -25.5)">
+                                      <g id="camera-alt" transform="translate(0 25.5)">
+                                        <circle id="Ellipse_71" data-name="Ellipse 71" class="pic-ternak" cx="12" cy="12" r="12" transform="translate(25.5 25.5)"/>
+                                        <path id="Path_31604" data-name="Path 31604" class="pic-ternak" d="M26.25,25.5,19.5,33H7.5A7.522,7.522,0,0,0,0,40.5v45A7.522,7.522,0,0,0,7.5,93h60A7.522,7.522,0,0,0,75,85.5v-45A7.522,7.522,0,0,0,67.5,33h-12l-6.75-7.5ZM37.5,81.75A18.75,18.75,0,1,1,56.25,63,18.568,18.568,0,0,1,37.5,81.75Z" transform="translate(0 -25.5)"/>
+                                      </g>
+                                    </g>
+                                  </svg>
+                                </div>
+                              </label>
+                            </div>
+                            <div class="column">
+                              <input type="file" class="inputfile inputfile-2" id="file" >
+                              <label for="file">
+                                <div class="pic-hewan">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 67.5" width="30">
+                                    <defs>
+                                      <style>
+                                        .pic-ternak {
+                                          fill: #a7a7a7;
+                                        }
+                                      </style>
+                                    </defs>
+                                    <g id="camera" transform="translate(0 -25.5)">
+                                      <g id="camera-alt" transform="translate(0 25.5)">
+                                        <circle id="Ellipse_71" data-name="Ellipse 71" class="pic-ternak" cx="12" cy="12" r="12" transform="translate(25.5 25.5)"/>
+                                        <path id="Path_31604" data-name="Path 31604" class="pic-ternak" d="M26.25,25.5,19.5,33H7.5A7.522,7.522,0,0,0,0,40.5v45A7.522,7.522,0,0,0,7.5,93h60A7.522,7.522,0,0,0,75,85.5v-45A7.522,7.522,0,0,0,67.5,33h-12l-6.75-7.5ZM37.5,81.75A18.75,18.75,0,1,1,56.25,63,18.568,18.568,0,0,1,37.5,81.75Z" transform="translate(0 -25.5)"/>
+                                      </g>
+                                    </g>
+                                  </svg>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -186,7 +310,7 @@
               </div>
             </div>
             <div class="field mt2">
-              <a href="pengajuan-mitra4.html" class="button btn-akadQ w-250">Lanjutkan</a>
+              <a href="pengajuan-mitra4.html" class="button btn-akadQ w-250 disabled">Lanjutkan</a>
             </div>
           </div>
         </div>
@@ -194,6 +318,81 @@
     </div>
   </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  
+  <script>
+      
+    $(".inp_umur").keyup(function(){
+      var umur = $(".inp_umur").val();
+      if(umur >= 6 && umur <= 12){
+        $('.field1').removeClass('none')
+        $('.field2').removeClass('none')
+        $('.field3').removeClass('none')
+        $('.field5').removeClass('none');
+      } else {
+        alert('Umur hewan anda tidak memenuhi syarat rukun kurban')
+      }
+    });
+
+    $('.weight').keyup(function(){
+      var weightdata = $('.weight').val();
+      if(weightdata != ""){
+        $('.btn-akadQ').removeClass('disabled')
+      } else {
+        $('.btn-akadQ').addClass('disabled')
+      }
+    });
+
+    $('.calc-weight').keyup(function(){
+      var height = $('#height').val();
+      var long = $('#long').val();
+      var chest = $('#chest').val();
+      if(height != "" && long != "" && chest != "") {
+        $('.btn-akadQ').removeClass('disabled')
+      } else {
+         $('.btn-akadQ').addClass('disabled')
+      }
+    });
+
+    function manual() {
+      $('.field5').removeClass('none');
+      $('.field4').removeClass('none');
+      $('.field3').addClass('none')
+    }
+    function timbangan() {
+      $('.field5').removeClass('none');
+      $('.field4').addClass('none');
+      $('.field3').removeClass('none')
+    }
+
+    document.getElementById("file").onchange = function(event) {
+      var file = document.getElementById("file");
+      if(file.files.length > 0)
+      {
+
+        var pathFile = file.value
+        var nameFile = file.files[0].name
+        var typeFile = file.files[0].type
+
+        if(typeFile != 'image/jpg' && typeFile != 'image/jpeg'){
+          alert('format file tidak didukung')
+          $('.pic-hewan svg').addClass('block').removeClass('none')
+          $('.pic-hewan').css('background-image', 'url()')
+          $('#filename').text("File format: jpg atau png");
+          return false
+        }
+
+        var reader = new FileReader();
+        reader.readAsDataURL(event.srcElement.files[0]);
+        var me = this;
+        reader.onload = function () {
+          var fileContent = reader.result;
+          console.log(reader);
+          $('#filename').text(file.files[0].name);
+          $('.pic-hewan svg').addClass('none');
+          $('.pic-hewan').css('background-image', 'url('+fileContent+')');
+          $('.pic-hewan').css('background-size', 'cover');
+        }
+      }
+    }
+  </script>
 </body>
 </html>

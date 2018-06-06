@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/extension.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 </head>
 <body>
@@ -53,15 +54,36 @@
             <p class="subtitle is-size-6 fw300">Masukan data-data peternakan Anda dibawah ini secara lengkap</p>
             <div class="field mt3">
               <label class="label">Pilih Untuk</label>
-              <input class="is-checkradio is-info" id="pribadi" type="radio" name="radio" checked="checked" onclick="pribadi()">
+              <input class="is-checkradio is-info" id="pribadi" type="radio" name="radio" checked="checked" onclick="pilih('pribadi')">
               <label for="pribadi">Pribadi</label>
-              <input class="is-checkradio is-info" id="badanusaha" type="radio" name="radio" onclick="badanusaha()">
+              <input class="is-checkradio is-info" id="badanusaha" type="radio" name="radio" onclick="pilih('badanusaha')">
               <label for="badanusaha">Badan Usaha</label>
             </div>
             <!-- pribadi -->
             <div class="pribadi">
               <div class="columns is-centered mt1">
                 <div class="column is-8">
+                  <div class="badanusaha none">
+                    <div class="columns">
+                      <div class="column">
+                        <div class="field mt1">
+                          <label class="label has-text-left">Nama Badan Usaha</label>
+                          <div class="control">
+                            <input class="input" type="text" placeholder="Nama Badan Usaha">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="field mt1">
+                          <label class="label has-text-left">Nomor SIUP</label>
+                          <div class="control">
+                            <input class="input" type="text" placeholder="Nomor SIUP">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                  </div>
                   <div class="columns">
                     <div class="column">
                       <div class="field mt1">
@@ -173,140 +195,6 @@
                 </div>
               </div>
             </div>
-            <!-- usaha -->
-            <div class="badanusaha none">
-              <div class="columns is-centered mt1">
-                <div class="column is-8">
-                  <div class="columns">
-                    <div class="column">
-                      <div class="field mt1">
-                        <label class="label has-text-left">Nama Badan Usaha</label>
-                        <div class="control">
-                          <input class="input" type="text" placeholder="Nama Badan Usaha">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="column">
-                      <div class="field mt1">
-                        <label class="label has-text-left">Nomor SIUP</label>
-                        <div class="control">
-                          <input class="input" type="text" placeholder="Nomor SIUP">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="columns">
-                    <div class="column">
-                      <div class="field mt1">
-                        <label class="label has-text-left">Nama Penanggung Jawab</label>
-                        <div class="control">
-                          <input class="input inp_name" type="text" placeholder="Nama Penanggung Jawab">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">NIK KTP</label>
-                        <div class="control">
-                          <input class="input inp_idnumb" type="number" placeholder="NIK KTP">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Email</label>
-                        <div class="control">
-                          <input class="input inp_email" type="email" placeholder="Email Anda">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">No Handphone / Telpon</label>
-                        <div class="control">
-                          <input class="input inp_phone" type="number" placeholder="No Handphone / Telpon">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">NPWP</label>
-                        <div class="control">
-                          <input class="input inp_npwp" type="number" placeholder="NPWP">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Nomor Rekening</label>
-                        <div class="control">
-                          <input class="input inp_accnumb" type="number" placeholder="Nomor Rekening">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Rekening Atas Nama</label>
-                        <div class="control">
-                          <input class="input inp_accname" type="text" placeholder="Rekening Atas Nama">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="column">
-                      <div class="field mt1">
-                        <label class="label has-text-left">Nama Peternakan</label>
-                        <div class="control">
-                          <input class="input inp_namep" type="text" placeholder="Nama Peternakan">
-                        </div>
-                      </div>
-                      <div class="field has-text-left mt1">
-                        <label class="label">Komoditas Hewan</label>
-                        <input class="is-checkradio is-info inp_animal" id="sapi" type="checkbox" name="sapi" value="sapi" checked="checked">
-                        <label for="sapi" class="no-margin">Sapi</label>
-                        <input class="is-checkradio is-info inp_animal" id="kambing" type="checkbox" name="kambing" value="kambing">
-                        <label for="kambing" class="no-margin">Kambing</label>
-                        <input class="is-checkradio is-info inp_animal" id="domba" type="checkbox" name="domba" value="domba">
-                        <label for="domba" class="no-margin">Domba</label>
-                      </div>
-                      <div class="field has-text-left mt1">
-                        <label class="label">Jenis Program</label>
-                        <input class="is-checkradio is-info inp_program" id="kurban" type="checkbox" name="kurban" value="kurban" checked="checked">
-                        <label for="kurban" class="no-margin">Qurban</label>
-                        <input class="is-checkradio is-info inp_program" id="akikah" type="checkbox" name="akikah" value="akikah">
-                        <label for="akikah" class="no-margin">Aqiqah</label>
-                      </div>
-                      <div class="field mt2-25">
-                        <label class="label has-text-left">Alamat Peternakan</label>
-                        <div class="control">
-                          <textarea class="textarea inp_alamatp" placeholder="Alamat Peternakan"></textarea>
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Pin Alamat (opsional)</label>
-                        <div class="pin-point relative">
-                          <a href="#" class="button btn-map">Ubah Lokasi</a>
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left mb-75">Upload Foto Peternakan</label>
-                        <input type="file" class="inputfile inputfile-2" id="file" >
-                        <label for="file">
-                          <div class="pic-ternak pointer">
-                            <div>
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 67.5" width="50">
-                                <defs>
-                                  <style>
-                                    .pic-ternak {
-                                      fill: #a7a7a7;
-                                    }
-                                  </style>
-                                </defs>
-                                <g id="camera" transform="translate(0 -25.5)">
-                                  <g id="camera-alt" transform="translate(0 25.5)">
-                                    <circle id="Ellipse_71" data-name="Ellipse 71" class="pic-ternak" cx="12" cy="12" r="12" transform="translate(25.5 25.5)"/>
-                                    <path id="Path_31604" data-name="Path 31604" class="pic-ternak" d="M26.25,25.5,19.5,33H7.5A7.522,7.522,0,0,0,0,40.5v45A7.522,7.522,0,0,0,7.5,93h60A7.522,7.522,0,0,0,75,85.5v-45A7.522,7.522,0,0,0,67.5,33h-12l-6.75-7.5ZM37.5,81.75A18.75,18.75,0,1,1,56.25,63,18.568,18.568,0,0,1,37.5,81.75Z" transform="translate(0 -25.5)"/>
-                                  </g>
-                                </g>
-                              </svg>
-                            </div>
-                          </div>
-                        </label>
-                        <div id="filename" class="mt0h">File format: jpg atau png</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             <div class="field mt2">
               <a href="pengajuan-mitra3.html" class="button btn-akadQ w-250 btn_submit">Lanjutkan</a>
@@ -322,101 +210,95 @@
   <script>
     $('#somecomponent').locationpicker();
 	
-	/* remove array function */
-	Array.prototype.remove = function() {
-		var what, a = arguments, L = a.length, ax;
-		while (L && this.length) {
-			what = a[--L];
-			while ((ax = this.indexOf(what)) !== -1) {
-				this.splice(ax, 1);
-			}
-		}
-		return this;
-	};
+  	/* remove array function */
+  	Array.prototype.remove = function() {
+  		var what, a = arguments, L = a.length, ax;
+  		while (L && this.length) {
+  			what = a[--L];
+  			while ((ax = this.indexOf(what)) !== -1) {
+  				this.splice(ax, 1);
+  			}
+  		}
+  		return this;
+  	};
 
-	
-	
-	var name;
-	var age; /* NO REK */
-	var email;
-	var gender; /* NPWP */
-	var address;
-	var phone;
-	var requisitionType
-	var education /* ATASNAMA */
-	var ranchAddress
-	var ranchDescription /* NAMA PETERNAKAN */
-	var programType = [];
-	var ktp;
-	var image_1;
-	
-	function jadi_mitra(){
-		 name = $(".inp_name").val();
-		 email = $(".inp_email").val();
-		 gender = $(".inp_npwp").val(); /* NPWP */
-		 address = $(".inp_address").val();
-		 phone = $(".inp_phone").val();
-		 education = $(".inp_accnumb").val();/* NO REK */
-		 age = $(".inp_accname").val(); /* ATASNAMA */
-		 ranchAddress = $(".inp_alamatp").val();
-		 ranchDescription  = $(".inp_namep").val(); /* NAMA PETERNAKAN */
-		 ktp = $(".inp_idnumb").val();;
-		 image_1="ok";
-		 
-		 $.ajax({
-			  method: "POST",
-			  url: "http://103.253.107.139/api/mitra/",
-			  //type:"json",
-			  data: {
-					name: name,
-					email: email,
-					gender : gender,
-					address : address,
-					phone : phone,
-					education : education,
-					requisitionType : requisitionType,
-					age : age,
-					ranchAddress : ranchAddress,
-					ranchDescription : ranchDescription,
-					programType : programType,
-					ktp : ktp,
-					image_1:image_1
-				},
-			  success:function( response ) {
-				// alert("Form Berhasil Dikirim!")
-				window.location="pengajuan-mitra3.html";
-			  },
-			  error:function(er){
-          // alert(er.responseJSON.error_description);
-        }
-			});	
-	}
-	
-	
-	$(document).ready(function(){
-		$("input [type='text'], textarea").val("");
-		$(".btn_submit").click(jadi_mitra)
-	});
-	
-	$(".inp_program").click(function(){
-		if($(this).is(':checked')){
-			programType.push($(this).val());
-		}else{
-			programType.remove($(this).val())
-		}
-	})
-	
-    function pribadi() {
-      $('.pribadi').css('display', 'block')
-      $('.badanusaha').css('display', 'none');
-	  requisitionType = "PERSONAL"
-	  console.log(requisitionType)
-    }
-    function badanusaha() {
-      $('.badanusaha').css('display', 'block')
-      $('.pribadi').css('display', 'none')
-	  requisitionType = "CORPORATE"
-	  console.log(requisitionType)
+  	var name;
+  	var age; /* NO REK */
+  	var email;
+  	var gender; /* NPWP */
+  	var address;
+  	var phone;
+  	var requisitionType
+  	var education /* ATASNAMA */
+  	var ranchAddress
+  	var ranchDescription /* NAMA PETERNAKAN */
+  	var programType = [];
+  	var ktp;
+  	var image_1;
+  	
+  	function jadi_mitra(){
+  		 name = $(".inp_name").val();
+  		 email = $(".inp_email").val();
+  		 gender = $(".inp_npwp").val(); /* NPWP */
+  		 address = $(".inp_address").val();
+  		 phone = $(".inp_phone").val();
+  		 education = $(".inp_accnumb").val();/* NO REK */
+  		 age = $(".inp_accname").val(); /* ATASNAMA */
+  		 ranchAddress = $(".inp_alamatp").val();
+  		 ranchDescription  = $(".inp_namep").val(); /* NAMA PETERNAKAN */
+  		 ktp = $(".inp_idnumb").val();;
+  		 image_1="ok";
+  		 
+  		 $.ajax({
+  			  method: "POST",
+  			  url: "http://103.253.107.139/api/mitra/",
+  			  //type:"json",
+  			  data: {
+  					name: name,
+  					email: email,
+  					gender : gender,
+  					address : address,
+  					phone : phone,
+  					education : education,
+  					requisitionType : requisitionType,
+  					age : age,
+  					ranchAddress : ranchAddress,
+  					ranchDescription : ranchDescription,
+  					programType : programType,
+  					ktp : ktp,
+  					image_1:image_1
+  				},
+  			  success:function( response ) {
+  				// alert("Form Berhasil Dikirim!")
+  				window.location="pengajuan-mitra3.html";
+  			  },
+  			  error:function(er){
+            // alert(er.responseJSON.error_description);
+          }
+  			});	
+  	}
+  	
+  	$(document).ready(function(){
+  		$("input [type='text'], textarea").val("");
+  		$(".btn_submit").click(jadi_mitra)
+  	});
+  	
+  	$(".inp_program").click(function(){
+  		if($(this).is(':checked')){
+  			programType.push($(this).val());
+  		}else{
+  			programType.remove($(this).val())
+  		}
+  	})
+  	
+    function pilih(param) {
+      if(param == "pribadi") {
+        $('.badanusaha').addClass('none').removeClass('block')
+        requisitionType = "PERSONAL"
+      } else {
+        $('.badanusaha').addClass('block').removeClass('none')
+        requisitionType = "CORPORATE"
+      }
     }
 
     $('.btn-map').click(function(){
@@ -425,18 +307,39 @@
     $('.delete').click(function(){
       $('.point-map').removeClass('is-active')
     })
-	
-	var file = document.getElementById("file");
-    file.onchange = function(){
-        if(file.files.length > 0)
-        {
+
+
+    document.getElementById("file").onchange = function(event) {
+      var file = document.getElementById("file");
+      if(file.files.length > 0)
+      {
+
+        var pathFile = file.value
+        var nameFile = file.files[0].name
+        var typeFile = file.files[0].type
+
+        if(typeFile != 'image/jpg' && typeFile != 'image/jpeg'){
+          alert('format file tidak didukung')
+          $('.pic-ternak svg').addClass('block').removeClass('none')
+          $('.pic-ternak').css('background-image', 'url()')
+          $('#filename').text("File format: jpg atau png");
+          return false
+        }
+
+        var reader = new FileReader();
+        reader.readAsDataURL(event.srcElement.files[0]);
+        var me = this;
+        reader.onload = function () {
+          var fileContent = reader.result;
+          console.log(reader);
           $('#filename').text(file.files[0].name);
           $('.pic-ternak svg').addClass('none');
-          $('.pic-ternak').css('background-image', 'url(img/banner-1.jpg)');
+          $('.pic-ternak').css('background-image', 'url('+fileContent+')');
           $('.pic-ternak').css('background-size', 'cover');
         }
-    };
-	
+      }
+    } 
+  	
   </script>
   
 </body>

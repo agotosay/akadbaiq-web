@@ -143,6 +143,9 @@ button, input, select, textarea {
 .mb-75 {
 	margin-bottom: -.75rem !important;
 }
+.mb-1h {
+	margin-bottom: -1.5rem !important;
+}
 .mb4 {
 	margin-bottom: 4rem !important;
 }
@@ -333,6 +336,15 @@ button, input, select, textarea {
 .input:read-only {
 	pointer-events: none;
 	cursor: not-allowed;
+	background: #fafafa;
+}
+.no-select {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none;
 }
 /*end global*/
 
@@ -475,28 +487,35 @@ hr {
 	z-index: 30;
 	width: 300px;
 	border-radius: 5px;
+	right: 0
 }
-@media (min-width: 1200px) {
+
+@media screen and (min-width: 1100px) {
+	.box-login {
+		top: 15px;
+	}
+}
+@media screen and (min-width: 1300px) {
 	.box-login {
 		top: 28px;
 	}
 }
-@media (min-width: 1400px) {
+@media screen and (min-width: 1400px) {
 	.box-login {
 		top: 40px;
 	}
 }
-@media (min-width: 1500px) {
+@media screen and (min-width: 1500px) {
 	.box-login {
 		top: 53px;
 	}
 }
-@media (min-width: 1650px) {
+@media screen and (min-width: 1650px) {
 	.box-login {
 		top: 83px;
 	}
 }
-@media (min-width: 1750px) {
+@media screen and (min-width: 1750px) {
 	.box-login {
 		top: 110px;
 	}
@@ -588,6 +607,17 @@ hr {
 }
 .menu-akun li + li {
 	border-top: 1px solid #D6D6D6;
+}
+.for-mitra li + li {
+	border-top: 1px solid #D6D6D6;	
+}
+.for-mitra li {
+	padding: .5rem 0;
+	cursor: pointer;
+}
+.for-mitra li:hover {
+	background: #fafafa;
+	font-weight: 500;
 }
 /*end home*/
 
@@ -681,10 +711,6 @@ hr {
 	height: 80px;
 	cursor: pointer;
 }
-/*end mitra*/
-
-
-
 .inputfile {
 	width: 0.1px;
 	height: 0.1px;
@@ -695,3 +721,87 @@ hr {
 #file {
 	height: 0;
 }
+.button.disabled {
+	cursor: not-allowed;
+	pointer-events: none;
+	background: #dbdbdb;
+	color: #3A3B3E;
+	border-color: #dbdbdb;
+} 
+/*end mitra*/
+
+
+/*peternakan*/
+.box-ternak {
+	padding: .75rem;
+	height: 230px
+}
+.img-ternak img {
+	height: 100px;
+	object-fit:cover;
+}
+.top-menu .level-item + .level-item {
+	margin-left: 1rem
+}
+.reason li {
+	padding: .75rem;
+	cursor: pointer;
+}
+.reason li:hover {
+	background: #fafafa;
+	font-weight: 500;
+}
+.reason li + li{
+	border-top: 1px solid #D6D6D6;
+}
+.detail-farm .modal-card-body {
+	padding: 1rem !important;
+}
+.img-ternak-detail img {
+	height: 200px;
+	object-fit:cover;
+}
+.detail-farm .modal-card-head, .box-reason .modal-card-head {
+	border-radius: 0;
+	background: #fff;
+	padding: 1rem;
+}
+.detail-farm .modal-card-body, .box-reason .modal-card-body {
+	padding: 0;
+}
+.detail-farm .modal-card {
+	width: 700px
+}
+.box-reason .modal-card {
+	width: 400px
+}
+.detail-farm .delete, .box-reason .delete {
+	background: #00AEEF
+}
+.action-button {
+	position: absolute;
+	bottom: 20px;
+	width: 93%;
+}
+.action-button.two .control {
+	width: 50%;
+}
+.action-button .button {
+	background: #00AEEF;
+	color: #fff;
+	border-color: #fff;
+}
+.action-button .button:hover {
+	border-color: #fff;
+	z-index: 0 !important;
+}
+.action-button .button svg{
+	fill: #fff;
+}
+.add-farm {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+/*end peternakan*/
