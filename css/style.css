@@ -441,6 +441,9 @@ hr {
 	font-size: 1.25rem;
 	border-bottom: 3px solid #00AEEF;
 }
+.how-to {
+	padding: 2rem 0;
+}
 .table-grade {
 	margin-top: 2rem;
 }
