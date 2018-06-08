@@ -1012,4 +1012,18 @@ hr {
 	display: flex;
 	align-items: center;
 }
+.badge-dash {
+	position: absolute;
+	width: 25px;
+	height: 24px;
+	background: #FFC60B;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+	top: 3px;
+	right: 4px;
+	color: #363636
+}
 /*end dashboard*/
