@@ -459,7 +459,7 @@ hr {
 .input.is-primary:active, .input.is-primary:focus {
 	box-shadow: none;
 }
-.btn-akadQ, .btn-akadQ:hover  {
+.btn-akadQ, .btn-akadQ:hover, .btn-akadQ:active, .btn-akadQ:focus  {
 	background: #00AEEF;
 	color: #fff;
 	border-color: #00AEEF;
