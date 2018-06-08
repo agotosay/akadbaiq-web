@@ -201,15 +201,15 @@
         <div class="container">
           <a class="buy-now align-items">
             <div class="margin-auto">
-              <div class="is-size-3 title fw500">Mau Beli <br>Hewan ?</div>
-              <div class="flex is-text-dark">
+              <div class="is-size-3 title fw500 is-text-white">Mau Beli <br>Hewan ?</div>
+              <div class="flex is-text-white">
                 Beli Sekarang
                 <span>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="20" class="ml0h">
                     <defs>
                       <style>
                         .arrow-right {
-                          fill: #363636;
+                          fill: #fff;
                         }
                       </style>
                     </defs>
@@ -272,51 +272,39 @@
     <!-- content 1 -->
     <div class="is-back-grey">
       <div class="container">
-        <div class="columns">
-          <div class="column is-7 align-items">
-            <div class="content">
-              <div class="title is-size-5">
-                Pencet Tombol, Dapatkan Ternak
+        <div class="columns is-multiline">
+          <div class="column is-4">
+            <div class="has-text-centered">
+              <img src="img/pencet-tombol.png" width="60%">
+              <div class="content">
+                <div class="title is-size-5 mt1">
+                  Pencet tombol, dapatkan ternak
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisc ingelit, sed do  eiusmod tempor incidi dunt utlab ore  et  dolor e magna aliqua. Ut enim ad minime niam, quis nostr exercitation ullamco laboris nisi ut aliquip ex e a commodo  consequat. </p>
               </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisc ingelit, sed do  eiusmod tempor incidi dunt utlab ore  et  dolor e magna aliqua. Ut enim ad minime niam, quis nostr exercitation ullamco laboris nisi ut aliquip ex e a commodo  consequat. Duis autir ure   dolorin  repre   hende rit  i n  voluptate velit e cillum dolore eu fugiat nulla pariatur. Excepteur sintoccaecatcupidatat non  proident.</p>
             </div>
           </div>
-          <div class="column has-text-right mt2">
-            <img src="img/img-1.png" width="70%">
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- content 2 -->
-    <div class="container">
-      <div class="columns">
-        <div class="column">
-          <img src="img/img-2.png" width="70%">
-        </div>
-        <div class="column is-7 align-items">
-          <div class="content">
-            <div class="title is-size-5">
-              Pilih Cara Pembayaran
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisc ingelit, sed do  eiusmod tempor incidi dunt utlab ore  et  dolor e magna aliqua. Ut enim ad minime niam, quis nostr exercitation ullamco laboris nisi ut aliquip ex e a commodo  consequat. Duis autir ure   dolorin  repre   hende rit  i n  voluptate velit e cillum dolore eu fugiat nulla pariatur. Excepteur sintoccaecatcupidatat non  proident.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- content 3 -->
-    <div class="is-back-grey">
-      <div class="container hero-body">
-        <div class="columns">
-          <div class="column is-7 align-items">
-            <div class="content">
-              <div class="title is-size-5">
-                Beri Rating, Kami Dengarkan
+          <div class="column is-4">
+            <div class="has-text-centered">
+              <img src="img/metode-pembayaran.png" width="60%">
+              <div class="content">
+                <div class="title is-size-5 mt1">
+                  Pilih cara pembayaran
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisc ingelit, sed do  eiusmod tempor incidi dunt utlab ore  et  dolor e magna aliqua. Ut enim ad minime niam, quis nostr exercitation ullamco laboris nisi ut aliquip ex e a commodo  consequat. </p>
               </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisc ingelit, sed do  eiusmod tempor incidi dunt utlab ore  et  dolor e magna aliqua. Ut enim ad minime niam, quis nostr exercitation ullamco laboris nisi ut aliquip ex e a commodo  consequat. Duis autir ure   dolorin  repre   hende rit  i n  voluptate velit e cillum dolore eu fugiat nulla pariatur. Excepteur sintoccaecatcupidatat non  proident.</p>
             </div>
           </div>
-          <div class="column has-text-right mt2">
-            <img src="img/img-3.png" width="70%">
+          <div class="column is-4">
+            <div class="has-text-centered">
+              <img src="img/rating.png" width="60%">
+              <div class="content">
+                <div class="title is-size-5 mt1">
+                  Beri rating, kami dengarkan
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisc ingelit, sed do  eiusmod tempor incidi dunt utlab ore  et  dolor e magna aliqua. Ut enim ad minime niam, quis nostr exercitation ullamco laboris nisi ut aliquip ex e a commodo  consequat. </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -614,10 +602,110 @@
       $('.menu-ternak').toggle();
       $('.menu-akun').css('display', 'none')
     })
+
     $('.akun').on('click', function(){
       $('.menu-akun').toggle();
       $('.menu-ternak').css('display', 'none')
     })
+
+    $('.menu-ternak').on('mouseleave', function(){
+      $('.menu-ternak').toggle()
+    })
+    $('.menu-akun').on('mouseleave', function(){
+      $('.menu-akun').toggle()
+    })
+
+    function cariternak() {
+      $('.box-no-data').addClass('none')
+      $('.box-have-data').addClass('block')
+      $('.box-have-data').removeClass('none')
+    }
+
+    function selectgrade(id){
+      $div = $('#menugrade'+id).addClass('is-active');
+      $('.menu-grade').not($div).removeClass('is-active');
+      $diva = $('#tablegrade'+id).addClass('block').removeClass('none');
+      $('.grade').not($diva).removeClass('block').addClass('none');
+    }
+
+    // if(localStorage.aq_mitra_status=="ok"){
+    //   $(".menu-ternak").html('<div class="content mb0h">'+
+    //                 '<p>Dashboard</p>'+
+    //               '</div>'+
+    //               '<div class="content mb0h">'+
+    //                 '<p>Pengaturan Hewan</p>'+
+    //               '</div>'+
+    //               '<div class="content mb0h">'+
+    //                 '<p>Pengaturan Ternak</p>'+
+    //               '</div>'+
+    //               '<div class="content mb0h">'+
+    //                 '<p>Transaksi Anda</p>'+
+    //               '</div>')
+    // }
+
+    if(localStorage.aq_login_status=="login"){
+        $(".box-login").hide();
+        $(".account_box").css("display","flex");
+        $(".register_btn").html("Ajukan Kemitraan");
+        $(".menu-ternak").find("a").attr("href","pengajuan-mitra1.html");
+        $(".box-buy").css("display","block")
+      }
+      
+      //localStorage.aq_login_status="";
+      /* LOGIN */
+        
+      var email
+      var pass
+      
+      var client_id = "my-client";
+      var grant_type = "password";
+      var client_secret = "qweqwe";
+      var scope = "read";
+      var data = {} 
+      
+      $(".inp_email").keyup(function(){
+        email = $(this).val();
+      });
+      
+      $("#inp_password").keyup(function(){
+        pass = $(this).val();
+      })
+      $(document).ready(function(){
+        
+        $(".login_btn").click(login);
+        $(".logout_btn").click(function(){
+            localStorage.aq_login_status="";
+            location.reload(true);
+        })
+
+        function login(){
+          //alert(pass);
+          email=$(".inp_email").val() ;
+          pass= $("#inp_password").val();
+          $.ajax({
+            method: "POST",
+            url: "http://13.251.128.231:8080/oauth/token",
+            //type:"json",
+            data: {
+              username: email,
+              password: pass,
+              client_id : client_id,
+              grant_type : grant_type,
+              client_secret:client_secret,
+              scope:scope
+            },
+            success:function( response ) {
+            $(".box-login").hide();
+            $(".account_box").css("display","flex");
+            localStorage.aq_login_status ="login";
+            $(".menu-ternak").find("a").attr("href","pengajuan-mitra1.html");
+            $(".register_btn").html("Ajukan Kemitraan");
+            $(".box-buy").css("display","block");
+            },
+            error:function(er){alert(er.responseJSON.error_description);}
+          });     
+      }
+      })
   </script>
 </body>
 </html>
