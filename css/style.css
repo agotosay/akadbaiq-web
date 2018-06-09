@@ -464,6 +464,11 @@ hr {
 	color: #fff;
 	border-color: #00AEEF;
 }
+.btn-akadQ-grey, .btn-akadQ-grey:hover, .btn-akadQ-grey:active, .btn-akadQ-grey:focus  {
+	background: #F1F1F1;
+	color: #5F6061;
+	border-color: #D6D6D6	;
+}
 .btn-fb, .btn-fb:hover  {
 	background: #29487D;
 	color: #fff;
@@ -729,7 +734,7 @@ hr {
 .pin-point {
 	height: 100px;
 	background-image: url('../img/display-map.jpg');
-	border-radius: 5px;
+	border-radius: 5px 5px 0 0;
 }
 .pin-point img {
 	border-radius: 5px;
@@ -858,6 +863,23 @@ hr {
 	justify-content: center;
 	cursor: pointer;
 }
+.location-label-lat {
+	background: #f4f4f4;
+	font-size: .85rem;
+	padding: .5rem;
+	font-weight: 300;
+	text-align: left;
+}
+.location-label-add {
+	background: #f4f4f4;
+	font-size: .85rem;
+	padding: .5rem;
+	font-weight: 300;
+	text-align: left;
+	border-radius: 0 0 5px 5px;
+	border-top: 1px solid #dbdbdb;
+	min-height: 50px;
+}
 /*end peternakan*/
 
 
@@ -948,7 +970,7 @@ hr {
 	width: 100%;
 	height: 80px;
 	object-fit: cover;
-	object-position: top;
+	object-position: top right;
 }
 .info-transaksi {
 	background: #F8F8F8;
