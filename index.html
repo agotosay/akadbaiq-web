@@ -846,8 +846,7 @@
           $.ajax({
             method: "POST",
             url: "http://13.251.128.231:8080/oauth/token",
-            crossDomain: true,
-            dataType:"jsonp",
+            //type:"json",
             data: {
               username: email,
               password: pass,
@@ -864,7 +863,7 @@
             $(".register_btn").html("Ajukan Kemitraan");
             $(".box-buy").css("display","block");
             },
-            error:function(er){alert('error');}
+            error:function(er){alert(er.responseJSON.error_description);}
           });     
       }
       })
