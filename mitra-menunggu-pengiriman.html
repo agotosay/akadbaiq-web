@@ -104,7 +104,7 @@
           <!-- content -->
           <div class="content has-text-left">
             <div class="title">
-              Menunggu Persetujuan
+              Menunggu Pengiriman
             </div>
             <div class="columns is-multinline">
               <div class="column is-7">
@@ -113,17 +113,15 @@
             </div>
           </div>
           <!-- table -->
-          <table class="table table-summary is-striped is-fullwidth">
+          <table class="table table-pengiriman is-striped is-fullwidth">
             <thead>
               <tr>
                 <th>Detail</th>
                 <th>Pembeli</th>
                 <th>Komoditas</th>
                 <th>Transaksi</th>
-                <th>Tenor</th>
-                <th>Jatuh Tempo</th>
-                <th>Harga</th>
-                <th>Persetujuan</th>
+                <th>Total Harga</th>
+                <th>Pengiriman</th>
               </tr>
             </thead>
             <tbody>
@@ -135,13 +133,10 @@
                 </td>
                 <td>Ajang Salim</td>
                 <td>Sapi Limosin</td>
-                <td>12/05/18</td>
-                <td>1/6</td>
-                <td>25/05/18</td>
+                <td class="is-text-blue">Selesai</td>
                 <td>Rp 20.000.000</td>
                 <td class="approval">
-                    <a href="#" class="button btn-akadQ w-65">Setuju</a>
-                    <a href="#" class="button btn-akadQ invert w-65">Tidak</a>
+                    <a href="#" class="button btn-akadQ">Konfirmasi</a>
                 </td>
               </tr>
               <tr>
@@ -152,13 +147,10 @@
                 </td>
                 <td>Sarifudin</td>
                 <td>Kambing Kacang</td>
-                <td>13/05/18</td>
-                <td>Tunai</td>
-                <td>-</td>
+                <td class="is-text-blue">Selesai</td>
                 <td>Rp 3.000.000</td>
                 <td class="approval">
-                    <a href="#" class="button btn-akadQ w-65">Setuju</a>
-                    <a href="#" class="button btn-akadQ invert w-65">Tidak</a>
+                    <a href="#" class="button btn-akadQ">Konfirmasi</a>
                 </td>
               </tr>
               <tr>
@@ -169,13 +161,10 @@
                 </td>
                 <td>Saidah</td>
                 <td>Kambing Jantan</td>
-                <td>20/05/18</td>
-                <td>Tunai</td>
-                <td>-</td>
+                <td class="is-text-blue">Selesai</td>
                 <td>Rp 2.000.000</td>
                 <td class="approval">
-                    <a href="#" class="button btn-akadQ w-65">Setuju</a>
-                    <a href="#" class="button btn-akadQ invert w-65">Tidak</a>
+                    <a href="#" class="button btn-akadQ">Konfirmasi</a>
                 </td>
               </tr>
               <tr>
@@ -186,13 +175,10 @@
                 </td>
                 <td>Muhammad Saleh</td>
                 <td>Sapi Jawa</td>
-                <td>12/05/18</td>
-                <td>1/3</td>
-                <td>25/05/18</td>
+                <td class="is-text-blue">Selesai</td>
                 <td>Rp 40.000.000</td>
                 <td class="approval">
-                    <a href="#" class="button btn-akadQ w-65">Setuju</a>
-                    <a href="#" class="button btn-akadQ invert w-65">Tidak</a>
+                    <a href="#" class="button btn-akadQ">Konfirmasi</a>
                 </td>
               </tr>
               <tr>
@@ -203,13 +189,10 @@
                 </td>
                 <td>Ahmad Fatah</td>
                 <td>Sapi Aceh</td>
-                <td>11/05/18</td>
-                <td>1/12</td>
-                <td>25/05/18</td>
+                <td class="is-text-blue">Selesai</td>
                 <td>Rp 15.000.000</td>
                 <td class="approval">
-                    <a href="#" class="button btn-akadQ w-65">Setuju</a>
-                    <a href="#" class="button btn-akadQ invert w-65">Tidak</a>
+                    <a href="#" class="button btn-akadQ">Konfirmasi</a>
                 </td>
               </tr>
               <tr>
@@ -220,13 +203,10 @@
                 </td>
                 <td>Sapri</td>
                 <td>Domba Garut</td>
-                <td>12/05/18</td>
-                <td>Tunai</td>
-                <td>-</td>
+                <td class="is-text-blue">Selesai</td>
                 <td>Rp 1.500.000</td>
                 <td class="approval">
-                    <a href="#" class="button btn-akadQ w-65">Setuju</a>
-                    <a href="#" class="button btn-akadQ invert w-65">Tidak</a>
+                    <a href="#" class="button btn-akadQ">Konfirmasi</a>
                 </td>
               </tr>
             </tbody>
@@ -238,15 +218,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script>
-      var swiper3 = new Swiper('.swiper3', {
-      slidesPerView: 1,
-      loop: true,
-      autoplay: true,
-      pagination: {
-        el: '.swiper-pagination.pag3',
-        clickable: true,
-      },
-    });
     function findDetail(){
       $('.detail-hewan').addClass('is-active');
       swiper3.update()

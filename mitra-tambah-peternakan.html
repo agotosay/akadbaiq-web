@@ -29,7 +29,7 @@
       <div class="column is-narrow pb0">
         <div class="left-menu is-back-grey">
           <div class="brand-icon has-text-centered">
-            <img src="img/logo.png" alt="Logo" width="70%">
+            <a href="home-mitra"><img src="img/logo.png" alt="Logo" width="70%"></a>
           </div>
           <aside class="menu">
             <ul class="menu-list">
@@ -106,13 +106,6 @@
               Data Peternakan
             </div>
             <p class="subtitle is-size-6 fw300">Masukan data-data peternakan Anda dibawah ini secara lengkap</p>
-            <div class="field mt3">
-              <label class="label">Pilih Untuk</label>
-              <input class="is-checkradio is-info" id="pribadi" type="radio" name="radio" checked="checked" onclick="pilih('pribadi')">
-              <label for="pribadi">Pribadi</label>
-              <input class="is-checkradio is-info" id="badanusaha" type="radio" name="radio" onclick="pilih('badanusaha')">
-              <label for="badanusaha">Badan Usaha</label>
-            </div>
             <!-- pribadi -->
             <div class="pribadi">
               <div class="columns is-centered mt1">
@@ -147,40 +140,18 @@
                         </div>
                       </div>
                       <div class="field mt1">
-                        <label class="label has-text-left">NIK KTP</label>
+                        <label class="label has-text-left">Alamat Peternakan</label>
                         <div class="control">
-                          <input class="input inp_idnumb" type="number" placeholder="NIK KTP">
+                          <textarea class="textarea inp_alamatp" placeholder="Alamat Peternakan"></textarea>
                         </div>
                       </div>
                       <div class="field mt1">
-                        <label class="label has-text-left">Email</label>
-                        <div class="control">
-                          <input class="input inp_email" type="email" placeholder="Email Anda">
+                        <label class="label has-text-left">Pin Alamat (opsional)</label>
+                        <div class="pin-point relative">
+                          <a href="#" class="button btn-map">Ubah Lokasi</a>
                         </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">No Handphone / Telpon</label>
-                        <div class="control">
-                          <input class="input inp_phone" type="number" placeholder="No Handphone / Telpon">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">NPWP</label>
-                        <div class="control">
-                          <input class="input inp_npwp" type="number" placeholder="NPWP">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Nomor Rekening</label>
-                        <div class="control">
-                          <input class="input inp_accnumb" type="number" placeholder="Nomor Rekening">
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Rekening Atas Nama</label>
-                        <div class="control">
-                          <input class="input inp_accname" type="text" placeholder="Rekening Atas Nama">
-                        </div>
+                        <label class="label location-label-lat mb0">Latitude - Longitude</label>
+                        <label class="label location-label-add">Jl. Kemandoran 3 RT 11 RW 03 No. 44</label>
                       </div>
                     </div>
                     <div class="column">
@@ -206,21 +177,7 @@
                         <input class="is-checkradio is-info inp_program" id="akikah" type="checkbox" name="akikah" value="akikah">
                         <label for="akikah" class="no-margin">Aqiqah</label>
                       </div>
-                      <div class="field mt2-25">
-                        <label class="label has-text-left">Alamat Peternakan</label>
-                        <div class="control">
-                          <textarea class="textarea inp_alamatp" placeholder="Alamat Peternakan"></textarea>
-                        </div>
-                      </div>
-                      <div class="field mt1">
-                        <label class="label has-text-left">Pin Alamat (opsional)</label>
-                        <div class="pin-point relative">
-                          <a href="#" class="button btn-map">Ubah Lokasi</a>
-                        </div>
-                        <label class="label location-label-lat mb0">Latitude - Longitude</label>
-                        <label class="label location-label-add">Jl. Kemandoran 3 RT 11 RW 03 No. 44</label>
-                      </div>
-                      <div class="field mt1">
+                      <div class="field mt2h">
                         <label class="label has-text-left mb-75">Upload Foto Peternakan</label>
                         <input type="file" class="inputfile inputfile-2" id="file" >
                         <label for="file">
@@ -374,7 +331,7 @@
         var nameFile = file.files[0].name
         var typeFile = file.files[0].type
 
-        if(typeFile != 'image/jpg' && typeFile != 'image/jpeg'){
+        if(typeFile != 'image/jpg' && typeFile != 'image/jpeg' && typeFile != 'image/png'){
           alert('format file tidak didukung')
           $('.pic-ternak svg').addClass('block').removeClass('none')
           $('.pic-ternak').css('background-image', 'url()')
@@ -391,7 +348,9 @@
           $('#filename').text(file.files[0].name);
           $('.pic-ternak svg').addClass('none');
           $('.pic-ternak').css('background-image', 'url('+fileContent+')');
-          $('.pic-ternak').css('background-size', 'cover');
+          $('.pic-ternak').css('background-size', 'contain');
+          $('.pic-ternak').css('background-repeat', 'no-repeat');
+          $('.pic-ternak').css('background-position', 'center');
         }
       }
     } 

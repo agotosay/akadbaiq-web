@@ -466,7 +466,9 @@
           $('#filename').text(file.files[0].name);
           $('.pic-hewan svg').addClass('none');
           $('.pic-hewan').css('background-image', 'url('+fileContent+')');
-          $('.pic-hewan').css('background-size', 'cover');
+          $('.pic-hewan').css('background-size', 'contain');
+          $('.pic-hewan').css('background-repeat', 'no-repeat');
+          $('.pic-hewan').css('background-position', 'center');
         }
       }
     }

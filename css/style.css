@@ -474,6 +474,11 @@ hr {
 	color: #00AEEF;
 	border-color: #00AEEF	;
 }
+.btn-akadQ.success, .btn-akadQ.success:hover, .btn-akadQ.success:active, .btn-akadQ.success:focus  {
+	background: #18ce04;
+	color: #fff;
+	border-color: #18ce04	;
+}
 .btn-fb, .btn-fb:hover  {
 	background: #29487D;
 	color: #fff;
@@ -1068,23 +1073,63 @@ hr {
 	width:15%
 }
 .table-summary th:nth-child(4) {
-	width: 12%
+	width: 10%
 }
 .table-summary th:nth-child(5) {
 	width: 7%
 }
 .table-summary th:nth-child(6) {
-	width: 9%
+	width: 12%
 }
 .table-summary th:nth-child(7) {
 	width: 15%
 }
-.table-summary thead th {
+.table-summary thead th, .table-pengiriman thead th, .table-pembayaran thead th {
     border-width: 0 0 2px;
     color: #363636;
     border-color: #00AEEF;
 }
 .w-65 {
 	width: 65px;
+}
+.w-100 {
+	width: 100px;
+}
+
+.table-pengiriman th:nth-child(1) {
+	width: 2%
+}
+.table-pengiriman th:nth-child(2) {
+	width: 17%
+}
+.table-pengiriman th:nth-child(3) {
+	width:15%
+}
+.table-pengiriman th:nth-child(4) {
+	width: 7%
+}
+.table-pengiriman th:nth-child(5) {
+	width: 10%
+}
+.table-pengiriman th:nth-child(6) {
+	width: 9%
+}
+.table-pembayaran th:nth-child(1) {
+	width: 2%
+}
+.table-pembayaran th:nth-child(2) {
+	width: 26%
+}
+.table-pembayaran th:nth-child(3) {
+	width:17%
+}
+.table-pembayaran th:nth-child(4) {
+	width: 10%
+}
+.table-pembayaran th:nth-child(5) {
+	width: 16%
+}
+.table-pembayaran th:nth-child(6) {
+	width: 12%
 }
 /*end summary*/
