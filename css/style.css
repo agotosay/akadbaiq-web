@@ -233,6 +233,9 @@ button, input, select, textarea {
 .flex {
 	display: flex;
 }
+.flex-end {
+	justify-content: flex-end;
+}
 .grid {
 	display: grid;
 }
@@ -765,6 +768,10 @@ hr {
 .point-map .modal-card-body {
 	padding: 0;
 }
+.point-map footer {
+	border-radius: 0;
+	padding: 10px;
+}
 .point-map .modal-card {
 	width: 500px
 }
@@ -889,6 +896,17 @@ hr {
 	border-radius: 0 0 5px 5px;
 	border-top: 1px solid #dbdbdb;
 	min-height: 50px;
+}
+.search-point {
+	position: absolute;
+	top: 7px;
+	width: 82%;
+	z-index: 9;
+	left: 44%;
+	transform: translateX(-50%);
+}
+.search-point input:focus {
+	border: 0;
 }
 /*end peternakan*/
 
@@ -1058,6 +1076,21 @@ hr {
 	right: 4px;
 	color: #363636
 }
+.badge-dash-top {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: #FFC60B;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+	top: -2px;
+	left: 14px;
+	color: #363636;
+	font-size: .65rem;
+}
 /*end dashboard*/
 
 
@@ -1085,9 +1118,9 @@ hr {
 	width: 15%
 }
 .table-summary thead th, .table-pengiriman thead th, .table-pembayaran thead th {
-    border-width: 0 0 2px;
-    color: #363636;
-    border-color: #00AEEF;
+	border-width: 0 0 2px;
+	color: #363636;
+	border-color: #00AEEF;
 }
 .w-65 {
 	width: 65px;

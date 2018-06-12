@@ -442,6 +442,7 @@
 
     document.getElementById("file").onchange = function(event) {
       var file = document.getElementById("file");
+      var kampret = event.srcElement.files[0];
       if(file.files.length > 0)
       {
 
@@ -449,7 +450,7 @@
         var nameFile = file.files[0].name
         var typeFile = file.files[0].type
 
-        if(typeFile != 'image/jpg' && typeFile != 'image/jpeg'){
+        if(typeFile != 'image/jpg' && typeFile != 'image/jpeg' && typeFile != 'image/png'){
           alert('format file tidak didukung')
           $('.pic-hewan svg').addClass('block').removeClass('none')
           $('.pic-hewan').css('background-image', 'url()')
@@ -458,7 +459,7 @@
         }
 
         var reader = new FileReader();
-        reader.readAsDataURL(event.srcElement.files[0]);
+        reader.readAsDataURL(kampret);
         var me = this;
         reader.onload = function () {
           var fileContent = reader.result;

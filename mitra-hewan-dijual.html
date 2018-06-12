@@ -470,18 +470,19 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script>
-      var swiper3 = new Swiper('.swiper3', {
-      slidesPerView: 1,
-      loop: true,
-      autoplay: true,
-      pagination: {
-        el: '.swiper-pagination.pag3',
-        clickable: true,
-      },
-    });
+     
     function findDetail(){
       $('.detail-hewan').addClass('is-active');
-      swiper3.update()
+      //swiper3.update();
+       var swiper3 = new Swiper('.swiper3', {
+          slidesPerView: 1,
+          loop: true,
+          autoplay: true,
+          pagination: {
+            el: '.swiper-pagination.pag3',
+            clickable: true,
+          },
+        });
     }
 
     $('.del-detail').click(function(){

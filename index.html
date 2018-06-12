@@ -794,20 +794,14 @@
       $('.grade').not($diva).removeClass('block').addClass('none');
     }
 
-    // if(localStorage.aq_mitra_status=="ok"){
-    //   $(".menu-ternak").html('<div class="content mb0h">'+
-    //                 '<p>Dashboard</p>'+
-    //               '</div>'+
-    //               '<div class="content mb0h">'+
-    //                 '<p>Pengaturan Hewan</p>'+
-    //               '</div>'+
-    //               '<div class="content mb0h">'+
-    //                 '<p>Pengaturan Ternak</p>'+
-    //               '</div>'+
-    //               '<div class="content mb0h">'+
-    //                 '<p>Transaksi Anda</p>'+
-    //               '</div>')
-    // }
+    if(localStorage.aq_mitra_status=="ok"){
+      $(".menu-ternak").html('<ul class="for-mitra">'+
+          '<li><a href="mitra-dashboard.html" class="is-text-dark">Dashboard</a></li>'+
+          '<li><a href="mitra-pengaturan-peternakan.html" class="is-text-dark">Pengaturan Peternakan</a></li>'+
+          '<li><a href="mitra-pengaturan-hewan.html" class="is-text-dark">Pengaturan Hewan</a></li>'+
+          '<li><a href="mitra-transaksi-anda.html" class="is-text-dark">Transaksi Anda</a></li>'+
+        '</ul>')
+     }
 
     if(localStorage.aq_login_status=="login"){
         $(".box-login").hide();
@@ -841,6 +835,7 @@
         $(".login_btn").click(login);
         $(".logout_btn").click(function(){
             localStorage.aq_login_status="";
+             localStorage.aq_mitra_status="";
             location.reload(true);
         })
 
