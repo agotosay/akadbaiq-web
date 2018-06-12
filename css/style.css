@@ -469,6 +469,11 @@ hr {
 	color: #5F6061;
 	border-color: #D6D6D6	;
 }
+.btn-akadQ.invert, .btn-akadQ.invert:hover, .btn-akadQ.invert:active, .btn-akadQ.invert:focus  {
+	background: #F5F5F5;
+	color: #00AEEF;
+	border-color: #00AEEF	;
+}
 .btn-fb, .btn-fb:hover  {
 	background: #29487D;
 	color: #fff;
@@ -1049,3 +1054,37 @@ hr {
 	color: #363636
 }
 /*end dashboard*/
+
+
+
+/*summary*/
+.table-summary th:nth-child(1) {
+	width: 7%
+}
+.table-summary th:nth-child(2) {
+	width: 17%
+}
+.table-summary th:nth-child(3) {
+	width:15%
+}
+.table-summary th:nth-child(4) {
+	width: 12%
+}
+.table-summary th:nth-child(5) {
+	width: 7%
+}
+.table-summary th:nth-child(6) {
+	width: 9%
+}
+.table-summary th:nth-child(7) {
+	width: 15%
+}
+.table-summary thead th {
+    border-width: 0 0 2px;
+    color: #363636;
+    border-color: #00AEEF;
+}
+.w-65 {
+	width: 65px;
+}
+/*end summary*/

@@ -6,100 +6,23 @@
   <title>AkadBaiQ</title>
   <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/swiper.css">
   <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 </head>
 <body>
-  <div class="modal box-reason">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title is-size-6 fw600">Alasan kenapa dihapus?</p>
-        <button class="delete del-reason" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-        <ul class="reason">
-          <li>Peternakan pindah tempat</li>
-          <li>Stok hewan habis</li>
-          <li>Pergantian pemilik</li>
-          <li>Gulung tikar</li>
-        </ul>
-      </section>
-    </div>
-  </div>
-
-  <div class="modal detail-farm">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title is-size-6 fw600">Detail Peternakan</p>
-        <button class="delete del-detail" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-        <div class="columns">
-          <div class="column is-5">
-            <div class="img-ternak-detail">
-              <img src="img/banner-1.jpg">
-            </div>
-          </div>
-          <div class="column relative">
-            <div class="columns">
-              <div class="column">
-                <div class="content desc-ternak">
-                  <div class="fw500">Bonsle Farm.UD</div>
-                  <div class="small">Depok, Jawa Barat</div>
-                </div>
-                <div class="content desc-ternak">
-                  <div class="fw500">Penanggung Jawab</div>
-                  <div class="small">Dadan Suramdan</div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="content desc-ternak">
-                  <div class="fw500">No Telp/HP</div>
-                  <div class="small">081193337511</div>
-                </div>
-                <div class="content desc-ternak">
-                  <div class="fw500">Email</div>
-                  <div class="small">dadan.suramdan@gmail.com</div>
-                </div>
-              </div>
-            </div>
-            <div class="field has-addons action-button two">
-              <p class="control">
-                <a class="button is-fullwidth edit-farm">
-                  <span class="icon mr0h">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M5,3C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19H5V5H12V3H5M17.78,4C17.61,4 17.43,4.07 17.3,4.2L16.08,5.41L18.58,7.91L19.8,6.7C20.06,6.44 20.06,6 19.8,5.75L18.25,4.2C18.12,4.07 17.95,4 17.78,4M15.37,6.12L8,13.5V16H10.5L17.87,8.62L15.37,6.12Z" /></svg>
-                  </span>
-                  <span>Edit</span>
-                </a>
-              </p>
-              <p class="control">
-                <a class="button is-fullwidth del-farm">
-                  <span class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M21.03,3L18,20.31C17.83,21.27 17,22 16,22H8C7,22 6.17,21.27 6,20.31L2.97,3H21.03M5.36,5L8,20H16L18.64,5H5.36M9,18V14H13V18H9M13,13.18L9.82,10L13,6.82L16.18,10L13,13.18Z" /></svg>
-                  </span>
-                  <span>Hapus</span>
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>        
-      </section>
-    </div>
-  </div>
 
   <section class="hero">
     <div class="columns">
       <div class="column is-narrow pb0">
         <div class="left-menu is-back-grey">
           <div class="brand-icon has-text-centered">
-            <a href="home-mitra.html"><img src="img/logo.png" alt="Logo" width="70%"></a>
+            <img src="img/logo.png" alt="Logo" width="70%">
           </div>
           <aside class="menu">
             <ul class="menu-list">
-              <li><a href="mitra-dashboard.html">Dashboard</a></li>
-              <li class="is-active"><a href="mitra-pengaturan-peternakan.html">Pengaturan Peternakan</a></li>
+              <li class="is-active"><a href="mitra-dashboard.html">Dashboard</a></li>
+              <li><a href="mitra-pengaturan-peternakan.html">Pengaturan Peternakan</a></li>
               <li class="menu-add-hewan">
                 <a class="align-items relative" onclick="showMenu()">
                   Pengaturan Hewan
@@ -179,85 +102,158 @@
             </div>
           </nav>
           <!-- content -->
-          <div class="columns is-multiline">
-            <div class="column is-3">
-              <div class="box-ternak shadow-box">
-                <div class="img-ternak">
-                  <img src="img/banner-1.jpg">
-                </div>
-                <div class="content desc-ternak">
-                  <div class="farm-name fw500">Bonsle Farm.UD</div>
-                  <div class="small">Depok, Jawa Barat</div>
-                </div>
-                <div class="field mt1">
-                  <a href="#" class="button btn-akadQ" onclick="detailFarm()">Lihat Detail</a>
-                </div>
-              </div>
+          <div class="content has-text-left">
+            <div class="title">
+              Menunggu Persetujuan
             </div>
-            <div class="column is-3">
-              <div class="box-ternak shadow-box">
-                <div class="img-ternak">
-                  <img src="img/banner-2.jpg">
-                </div>
-                <div class="content desc-ternak">
-                  <div class="farm-name fw500">Berkah Abadi</div>
-                  <div class="small">Karawang Barat</div>
-                </div>
-                <div class="field mt1">
-                  <a href="#" class="button btn-akadQ" onclick="detailFarm()">Lihat Detail</a>
-                </div>
-              </div>
-            </div>
-            <div class="column is-3">
-              <div class="box-ternak shadow-box">
-                <div class="img-ternak">
-                  <img src="img/banner-3.jpg">
-                </div>
-                <div class="content desc-ternak">
-                  <div class="farm-name fw500">Pusat Kambing</div>
-                  <div class="small">Parung Panjang</div>
-                </div>
-                <div class="field mt1">
-                  <a href="#" class="button btn-akadQ" onclick="detailFarm()">Lihat Detail</a>
-                </div>
-              </div>
-            </div>
-            <div class="column is-3">
-              <div class="box-ternak shadow-box">
-                <div class="img-ternak">
-                  <img src="img/banner-1.jpg">
-                </div>
-                <div class="content desc-ternak">
-                  <div class="farm-name fw500">Bonsle Farm.UD</div>
-                  <div class="small">Depok, Jawa Barat</div>
-                </div>
-                <div class="field mt1">
-                  <a href="#" class="button btn-akadQ" onclick="detailFarm()">Lihat Detail</a>
-                </div>
-              </div>
-            </div>
-            <div class="column is-3">
-              <div class="box-ternak shadow-box add-farm">
-                <div class="tambah-ternak has-text-centered">
-                  <img src="img/tambah-ternak.png" width="100">
-                  <div>Tambah Peternakan</div>
-                </div>
+            <div class="columns is-multinline">
+              <div class="column is-7">
+                <p class="subtitle is-size-6 fw300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               </div>
             </div>
           </div>
+          <!-- table -->
+          <table class="table table-summary is-striped is-fullwidth">
+            <thead>
+              <tr>
+                <th>Detail</th>
+                <th>Pembeli</th>
+                <th>Komoditas</th>
+                <th>Transaksi</th>
+                <th>Tenor</th>
+                <th>Tempo</th>
+                <th>Harga</th>
+                <th>Persetujuan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="find-detail is-pulled-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" fill="#fff"></path></svg>
+                  </div>
+                </td>
+                <td>Ajang Salim</td>
+                <td>Sapi Limosin</td>
+                <td>12/05/2018</td>
+                <td>1/6</td>
+                <td>25</td>
+                <td>Rp 20.000.000</td>
+                <td class="approval">
+                    <a href="#" class="button btn-akadQ w-65">Setuju</a>
+                    <a href="#" class="button btn-akadQ invert w-65">Tidak</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="find-detail is-pulled-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" fill="#fff"></path></svg>
+                  </div>
+                </td>
+                <td>Sarifudin</td>
+                <td>Kambing Kacang</td>
+                <td>13/05/2018</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Rp 3.000.000</td>
+                <td class="approval">
+                    <a href="#" class="button btn-akadQ w-65">Setuju</a>
+                    <a href="#" class="button btn-akadQ invert w-65">Tidak</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="find-detail is-pulled-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" fill="#fff"></path></svg>
+                  </div>
+                </td>
+                <td>Saidah</td>
+                <td>Kambing Jantan</td>
+                <td>20/05/2018</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Rp 2.000.000</td>
+                <td class="approval">
+                    <a href="#" class="button btn-akadQ w-65">Setuju</a>
+                    <a href="#" class="button btn-akadQ invert w-65">Tidak</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="find-detail is-pulled-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" fill="#fff"></path></svg>
+                  </div>
+                </td>
+                <td>Muhammad Saleh</td>
+                <td>Sapi Jawa</td>
+                <td>12/05/2018</td>
+                <td>1/3</td>
+                <td>15</td>
+                <td>Rp 40.000.000</td>
+                <td class="approval">
+                    <a href="#" class="button btn-akadQ w-65">Setuju</a>
+                    <a href="#" class="button btn-akadQ invert w-65">Tidak</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="find-detail is-pulled-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" fill="#fff"></path></svg>
+                  </div>
+                </td>
+                <td>Ahmad Fatah</td>
+                <td>Sapi Aceh</td>
+                <td>11/05/2018</td>
+                <td>1/12</td>
+                <td>30</td>
+                <td>Rp 15.000.000</td>
+                <td class="approval">
+                    <a href="#" class="button btn-akadQ w-65">Setuju</a>
+                    <a href="#" class="button btn-akadQ invert w-65">Tidak</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="find-detail is-pulled-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" fill="#fff"></path></svg>
+                  </div>
+                </td>
+                <td>Sapri</td>
+                <td>Domba Garut</td>
+                <td>12/05/2018</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Rp 1.500.000</td>
+                <td class="approval">
+                    <a href="#" class="button btn-akadQ w-65">Setuju</a>
+                    <a href="#" class="button btn-akadQ invert w-65">Tidak</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+  <script src="js/swiper.min.js"></script>
   <script>
-    function detailFarm(){
-      $('.detail-farm').addClass('is-active');
+      var swiper3 = new Swiper('.swiper3', {
+      slidesPerView: 1,
+      loop: true,
+      autoplay: true,
+      pagination: {
+        el: '.swiper-pagination.pag3',
+        clickable: true,
+      },
+    });
+    function findDetail(){
+      $('.detail-hewan').addClass('is-active');
+      swiper3.update()
     }
 
     $('.del-detail').click(function(){
-      $('.detail-farm').removeClass('is-active');
+      $('.detail-hewan').removeClass('is-active');
     })
 
     $('.del-farm').click(function(){
@@ -269,11 +265,8 @@
       $('.box-reason').removeClass('is-active');
     })
 
-    $('.add-farm').click(function(){
-      window.location.href='mitra-tambah-peternakan.html';
-    })
     $('.edit-farm').click(function(){
-      window.location.href='mitra-tambah-peternakan.html';
+      window.location.href='mitra-tambah-hewan.html';
     })
 
     function showMenu(){
