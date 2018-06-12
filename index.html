@@ -846,7 +846,8 @@
           $.ajax({
             method: "POST",
             url: "http://13.251.128.231:8080/oauth/token",
-            //type:"json",
+            crossDomain: true,
+            dataType:"jsonp",
             data: {
               username: email,
               password: pass,
