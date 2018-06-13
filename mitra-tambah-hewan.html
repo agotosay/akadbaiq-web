@@ -442,7 +442,6 @@
 
     document.getElementById("file").onchange = function(event) {
       var file = document.getElementById("file");
-      var kampret = event.srcElement.files[0];
       if(file.files.length > 0)
       {
 
@@ -459,7 +458,7 @@
         }
 
         var reader = new FileReader();
-        reader.readAsDataURL(kampret);
+        reader.readAsDataURL(event.srcElement.files[0]);
         var me = this;
         reader.onload = function () {
           var fileContent = reader.result;
