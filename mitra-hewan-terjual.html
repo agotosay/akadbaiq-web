@@ -11,7 +11,8 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 </head>
 <body>
-  <div class="modal box-reason">
+
+  <div class="modal modal-left box-reason">
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
@@ -29,7 +30,7 @@
     </div>
   </div>
 
-  <div class="modal detail-hewan">
+  <div class="modal modal-left detail-hewan">
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
@@ -45,9 +46,9 @@
             <div class="swiper-slide"><img src="img/sapi-3-min.jpg"></div>
           </div>
           <!-- pagination -->
-         
+          <div class="swiper-pagination pag3"></div>
         </div>
-         <div class="swiper-pagination pag3"></div>
+         
         <div class="content desc-ternak mt1">
           <div class="fw500">Sapi Bali Super</div>
           <table class="table mt1 is-fullwidth is-striped">
@@ -84,7 +85,7 @@
 
   <section class="hero">
     <div class="columns">
-      <div class="column is-narrow pb0">
+      <div class="column for-left is-narrow pb0">
         <div class="left-menu is-back-grey">
           <div class="brand-icon has-text-centered">
             <a href="home-mitra.html"><img src="img/logo.png" alt="Logo" width="70%"></a>
@@ -111,7 +112,7 @@
           </aside>
         </div>
       </div>
-      <div class="column">
+      <div class="column for-right">
         <div class="right-menu">
           <nav class="level top-menu">
             <div class="level-left">
@@ -377,20 +378,21 @@
       </div>
     </div>
   </section>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/jquery.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script>
-      var swiper3 = new Swiper('.swiper3', {
-      slidesPerView: 1,
-      loop: true,
-      autoplay: true,
-      pagination: {
-        el: '.swiper-pagination.pag3',
-        clickable: true,
-      },
-    });
+      
     function findDetail(){
       $('.detail-hewan').addClass('is-active');
+      var swiper3 = new Swiper('.swiper3', {
+        slidesPerView: 1,
+        loop: true,
+        autoplay: true,
+        pagination: {
+          el: '.swiper-pagination.pag3',
+          clickable: true,
+        },
+      });
     }
 
     $('.del-detail').click(function(){

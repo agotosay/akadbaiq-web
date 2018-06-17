@@ -11,80 +11,199 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 </head>
 <body>
-  <div class="modal box-reason">
+
+  <div class="modal modal-left detail-informasi">
     <div class="modal-background"></div>
     <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title is-size-6 fw600">Alasan kenapa dihapus?</p>
-        <button class="delete del-reason" aria-label="close"></button>
-      </header>
+      
       <section class="modal-card-body">
-        <ul class="reason">
-          <li>Sudah ada suntingan yang sama</li>
-          <li>Hewan Ternak sudah terjual</li>
-          <li>Hewan ternak Mati</li>
-          <li>Alasan Kenapa Dihapus</li>
+        <button class="delete del-informasi" aria-label="close"></button>
+        <ul class="tabbing">
+          <li class="tab-link current" data-tab="tab-1">Bulan 1</li>
+          <li class="tab-link" data-tab="tab-2">Bulan 2</li>
+          <li class="tab-link" data-tab="tab-3">Bulan 3</li>
         </ul>
+
+        <div id="tab-1" class="tab-content current">
+          <div class="columns">
+            <div class="column is-5">
+              <div class="swiper-container swiper3">
+                <!-- banner slider -->
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/sapi-1-min.jpg"></div>
+                  <div class="swiper-slide"><img src="img/sapi-2-min.jpg"></div>
+                  <div class="swiper-slide"><img src="img/sapi-3-min.jpg"></div>
+                </div>
+                
+              </div>
+              <!-- pagination -->
+              <div class="swiper-pagination pag3"></div>
+              <!-- button -->
+              <a class="button is-fullwidth btn-akadQ mt1">Perbarui Kondisi Hewan</a>
+            </div>
+            <div class="column">
+              <div class="content desc-ternak">
+                <div class="fw500">Sapi Bali Super</div>
+                <table class="table mt1 is-fullwidth is-striped">
+                  <tbody>
+                    <tr>
+                      <td>Umur</td>
+                      <td>: &nbsp;5 Bulan</td>
+                    </tr>
+                    <tr>
+                      <td>Panjang</td>
+                      <td>: &nbsp;150cm</td>
+                    </tr>
+                    <tr>
+                      <td>Tinggi</td>
+                      <td>: &nbsp;110cm</td>
+                    </tr>
+                    <tr>
+                      <td>Lingkar Dada</td>
+                      <td>: &nbsp;260cm</td>
+                    </tr>
+                    <tr>
+                      <td>Berat</td>
+                      <td>: &nbsp;90kg</td>
+                    </tr>
+                    <tr>
+                      <td>Tenor</td>
+                      <td>: &nbsp;1/6</td>
+                    </tr>
+                    <tr>
+                      <td>Pembayaran</td>
+                      <td>: &nbsp;Rp 3.000.000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="level">
+            <div class="level-left">
+              <div class="level-item">
+                <div class="last-update">
+                  Update gambar : 5 Juni 2018
+                </div>
+              </div>
+            </div>
+            <div class="level-right">
+              <div class="level-item">
+                <div class="last-update">
+                  Update konten : 5 Juni 2018
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="tab-2" class="tab-content">
+          <div class="content has-text-centered">
+            <div class="title is-size-5">
+              Update Hewan Tabungan
+            </div>
+            <p class="subtitle is-size-6 fw300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <img src="img/icon-hewan.png" width="150">
+            <!-- button -->
+            <div class="field mt1">
+              <a class="button btn-akadQ w-250 mt1">Update Hewan Sekarang</a>
+            </div>
+          </div>
+        </div>
+        <div id="tab-3" class="tab-content">
+          <div class="content has-text-centered">
+            <div class="title is-size-5">
+              Update Hewan Tabungan
+            </div>
+            <p class="subtitle is-size-6 fw300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <img src="img/icon-hewan.png" width="150">
+            <!-- button -->
+            <div class="field mt1">
+              <a class="button btn-akadQ w-250 mt1">Update Hewan Sekarang</a>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </div>
-
-  <div class="modal detail-hewan">
+  
+  <div class="modal modal-left detail-tenor">
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title is-size-6 fw600">Detail Hewan</p>
-        <button class="delete del-detail" aria-label="close"></button>
+        <p class="modal-card-title is-size-6 fw600">Rincian Tenor</p>
+        <button class="delete del-reminder" id="setujuDel" aria-label="close"></button>
       </header>
       <section class="modal-card-body">
-        <div class="swiper-container swiper3">
-          <!-- banner slider -->
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="img/sapi-1-min.jpg"></div>
-            <div class="swiper-slide"><img src="img/sapi-2-min.jpg"></div>
-            <div class="swiper-slide"><img src="img/sapi-3-min.jpg"></div>
-          </div>
-          <!-- pagination -->
-          <div class="swiper-pagination pag3"></div>
-        </div>
-         
-        <div class="content desc-ternak mt1">
-          <div class="fw500">Sapi Bali Super</div>
-          <table class="table mt1 is-fullwidth is-striped">
-            <tbody>
-              <tr>
-                <td>Umur</td>
-                <td>: &nbsp;2</td>
-              </tr>
-              <tr>
-                <td>Panjang</td>
-                <td>: &nbsp;100cm</td>
-              </tr>
-              <tr>
-                <td>Tinggi</td>
-                <td>: &nbsp;50cm</td>
-              </tr>
-              <tr>
-                <td>Lingkar Dada</td>
-                <td>: &nbsp;160cm</td>
-              </tr>
-              <tr>
-                <td>Berat</td>
-                <td>: &nbsp;90kg</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="last-update has-text-right mt2">
-            Terakhir update : 5 Juni 2018 20:145 WIB
-          </div>
-        </div>
+        <table class="table intro-tenor is-fullwidth">
+          <tr>
+            <td>
+              Pembayaran Tanggal
+            </td>
+            <td>
+              : &nbsp; 26 setiap bulan
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Status Pembayaran
+            </td>
+            <td>
+              : &nbsp; 3/6
+            </td>
+          </tr>
+        </table>
+        <table class="table informasi-tenor is-fullwidth">
+          <thead>
+            <tr>
+              <th>Tanggal</th>
+              <th>Jumlah</th>
+              <th>Tenor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>05/06/18</td>
+              <td>Rp 5.000.000</td>
+              <td>1 (Lunas)</td>
+            </tr>
+            <tr>
+              <td>05/07/18</td>
+              <td>Rp 5.000.000</td>
+              <td>2 (Lunas)</td>
+            </tr>
+            <tr>
+              <td>05/08/18</td>
+              <td>Rp 5.000.000</td>
+              <td>3 (Lunas)</td>
+            </tr>
+            <tr>
+              <td>05/09/18</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>05/10/18</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>05/11/18</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td class="is-text-blue fw500">Total</td>
+              <td class="is-text-blue fw500" colspan="2">Rp 20.000.000</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </div>
   </div>
 
   <section class="hero">
     <div class="columns">
-      <div class="column is-narrow pb0">
+      <div class="column for-left is-narrow pb0">
         <div class="left-menu is-back-grey">
           <div class="brand-icon has-text-centered">
             <a href="home-mitra.html"><img src="img/logo.png" alt="Logo" width="70%"></a>
@@ -111,7 +230,7 @@
           </aside>
         </div>
       </div>
-      <div class="column">
+      <div class="column for-right">
         <div class="right-menu">
           <nav class="level top-menu">
             <div class="level-left">
@@ -176,7 +295,7 @@
             <div class="title">
               Update Hewan Tabungan
             </div>
-            <div class="columns is-multinline">
+            <div class="columns">
               <div class="column is-7">
                 <p class="subtitle is-size-6 fw300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               </div>
@@ -226,10 +345,10 @@
                 <div class="more-detail">
                   <div class="columns">
                     <div class="column">
-                      <a class="button is-fullwidth btn-akadQ">Informasi</a>
+                      <a class="button is-fullwidth btn-akadQ informasiClick">Informasi</a>
                     </div>
                     <div class="column">
-                      <a class="button is-fullwidth btn-akadQ-grey">Rincian Tenor</a>
+                      <a class="button is-fullwidth btn-akadQ-grey tenorClick">Rincian Tenor</a>
                     </div>
                   </div>
                 </div>
@@ -278,10 +397,10 @@
                 <div class="more-detail">
                   <div class="columns">
                     <div class="column">
-                      <a class="button is-fullwidth btn-akadQ">Informasi</a>
+                      <a class="button is-fullwidth btn-akadQ informasiClick">Informasi</a>
                     </div>
                     <div class="column">
-                      <a class="button is-fullwidth btn-akadQ-grey">Rincian Tenor</a>
+                      <a class="button is-fullwidth btn-akadQ-grey tenorClick">Rincian Tenor</a>
                     </div>
                   </div>
                 </div>
@@ -330,10 +449,10 @@
                 <div class="more-detail">
                   <div class="columns">
                     <div class="column">
-                      <a class="button is-fullwidth btn-akadQ">Informasi</a>
+                      <a class="button is-fullwidth btn-akadQ informasiClick">Informasi</a>
                     </div>
                     <div class="column">
-                      <a class="button is-fullwidth btn-akadQ-grey">Rincian Tenor</a>
+                      <a class="button is-fullwidth btn-akadQ-grey tenorClick">Rincian Tenor</a>
                     </div>
                   </div>
                 </div>
@@ -382,10 +501,10 @@
                 <div class="more-detail">
                   <div class="columns">
                     <div class="column">
-                      <a class="button is-fullwidth btn-akadQ">Informasi</a>
+                      <a class="button is-fullwidth btn-akadQ informasiClick">Informasi</a>
                     </div>
                     <div class="column">
-                      <a class="button is-fullwidth btn-akadQ-grey">Rincian Tenor</a>
+                      <a class="button is-fullwidth btn-akadQ-grey tenorClick">Rincian Tenor</a>
                     </div>
                   </div>
                 </div>
@@ -396,40 +515,42 @@
       </div>
     </div>
   </section>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/jquery.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script>
+      
+    $('ul.tabbing li').click(function(){
+      var tab_id = $(this).attr('data-tab');
+
+      $('ul.tabbing li').removeClass('current');
+      $('.tab-content').removeClass('current');
+
+      $(this).addClass('current');
+      $("#"+tab_id).addClass('current');
+    })
+
+    $('.informasiClick').click(function(){
+      $('.detail-informasi').addClass('is-active')
+      $('html').addClass('hide-overflow')
       var swiper3 = new Swiper('.swiper3', {
-      slidesPerView: 1,
-      loop: true,
-      autoplay: true,
-      pagination: {
-        el: '.swiper-pagination.pag3',
-        clickable: true,
-      },
+        slidesPerView: 1,
+        loop: true,
+        autoplay: true,
+        pagination: {
+          el: '.swiper-pagination.pag3',
+          clickable: true,
+        },
+      });
     });
-    function findDetail(){
-      $('.detail-hewan').addClass('is-active');
-      swiper3.update()
-    }
 
-    $('.del-detail').click(function(){
-      $('.detail-hewan').removeClass('is-active');
+    $('.tenorClick').click(function(){
+      $('.detail-tenor').addClass('is-active')
     })
 
-    $('.del-farm').click(function(){
-      $('.box-reason').addClass('is-active');
-      $('.detail-farm').removeClass('is-active');
+    $('.modal .delete').click(function(){
+      $(this).parents('.modal').removeClass('is-active')
+      $('html').removeClass('hide-overflow')
     })
-
-    $('.del-reason').click(function(){
-      $('.box-reason').removeClass('is-active');
-    })
-
-    $('.edit-farm').click(function(){
-      window.location.href='mitra-tambah-hewan.html';
-    })
-
     function showMenu(){
       if($('.sub-menus').hasClass('none')) {
         $('.sub-menus').addClass('block').removeClass('none');

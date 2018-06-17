@@ -11,10 +11,97 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 </head>
 <body>
-
+  
+  <div class="modal modal-left detail-pembeli">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title is-size-6 fw600">Detail Menunggu Pembayaran</p>
+        <button class="delete del-detail" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <div class="content desc-ternak">
+          <div class="columns">
+            <div class="column is-narrow">
+              <div class="picprofile">
+                <img src="img/profile.jpg">
+              </div>
+            </div>
+            <div class="column align-items">
+              <div class="content desc-ternak">
+                <div class="farm-name fw500">Ajang Salim</div>
+                <div class="small">Jalan Kemandoran 3 RT 11 RW 03 No.44, Kel: Grogol Utara, Kec: Kebayoran Lama, 12210</div>
+                 <a class="button btn-akadQ mt1">Point Map</a>
+              </div>
+            </div>
+          </div>
+          <table class="table mt1 is-fullwidth is-striped">
+            <tbody>
+              <tr>
+                <td>Komoditas</td>
+                <td class="fw500">: &nbsp;Sapi Limosin</td>
+              </tr>
+              <tr>
+                <td>Transaksi</td>
+                <td class="fw500">: &nbsp;12/05/18</td>
+              </tr>
+              <tr>
+                <td>Nomor Invoice</td>
+                <td class="fw500">: &nbsp;INV/20180605/XVIII/VI/168854789</td>
+              </tr>
+              <tr>
+                <td>Jenis Transaksi</td>
+                <td class="fw500">: &nbsp;Tabungan - 3/6</td>
+              </tr>
+              <tr>
+                <td>Jumlah Pembayaran</td>
+                <td class="fw500">: &nbsp;Rp 3.000.000</td>
+              </tr>
+              <tr>
+                <td>Jatuh Tempo</td>
+                <td class="fw500">: &nbsp;25/07/18</td>
+              </tr>
+              <tr>
+                <td>No Handphone / Telpon</td>
+                <td class="fw500">: &nbsp;081281532099</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+  
+  <div class="modal modal-left detail-reminder">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title is-size-6 fw600">Mengingatkan Pembeli</p>
+        <button class="delete del-reminder" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <div class="content desc-ternak">
+          <div class="columns">
+            <div class="column is-narrow">
+              <div class="picprofile">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100" height="100" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z" fill="#00AEEF"/></svg>
+              </div>
+            </div>
+            <div class="column align-items">
+              <div class="content desc-ternak">
+                <div class="farm-name fw500">Terima Kasih</div>
+                <div class="small">Anda telah membantu kami untuk mengingatkan kepada pembeli untuk melakukan pembayaran</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  
   <section class="hero">
     <div class="columns">
-      <div class="column is-narrow pb0">
+      <div class="column for-left is-narrow pb0">
         <div class="left-menu is-back-grey">
           <div class="brand-icon has-text-centered">
             <a href="home-mitra.html"><img src="img/logo.png" alt="Logo" width="70%"></a>
@@ -41,7 +128,7 @@
           </aside>
         </div>
       </div>
-      <div class="column">
+      <div class="column for-right">
         <div class="right-menu">
           <nav class="level top-menu">
             <div class="level-left">
@@ -106,7 +193,7 @@
             <div class="title">
               Menunggu Pembayaran
             </div>
-            <div class="columns is-multinline">
+            <div class="columns">
               <div class="column is-7">
                 <p class="subtitle is-size-6 fw300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               </div>
@@ -237,39 +324,25 @@
       </div>
     </div>
   </section>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/jquery.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script>
-      var swiper3 = new Swiper('.swiper3', {
-      slidesPerView: 1,
-      loop: true,
-      autoplay: true,
-      pagination: {
-        el: '.swiper-pagination.pag3',
-        clickable: true,
-      },
+    $('.find-detail').click(function(){
+      $('.detail-pembeli').addClass('is-active');
     });
-    function findDetail(){
-      $('.detail-hewan').addClass('is-active');
-      swiper3.update()
-    }
 
     $('.del-detail').click(function(){
-      $('.detail-hewan').removeClass('is-active');
-    })
+      $('.detail-pembeli').removeClass('is-active');
+    });
 
-    $('.del-farm').click(function(){
-      $('.box-reason').addClass('is-active');
-      $('.detail-farm').removeClass('is-active');
-    })
+    $('.approval a').click(function(){
+      $('.detail-reminder').addClass('is-active');
+      $(this).addClass('disabled');
+    });
 
-    $('.del-reason').click(function(){
-      $('.box-reason').removeClass('is-active');
-    })
-
-    $('.edit-farm').click(function(){
-      window.location.href='mitra-tambah-hewan.html';
-    })
+    $('.del-reminder').click(function(){
+      $('.detail-reminder').removeClass('is-active');
+    });
 
     function showMenu(){
       if($('.sub-menus').hasClass('none')) {
